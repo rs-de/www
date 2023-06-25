@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { NextIntlProvider } from "next-intl";
 import type { AppProps } from "next/app";
 import { Layout } from "@/components/Layout";
-import { Flowbite } from "flowbite-react";
+import { ThemeProvider as DarkModeProvider } from "next-themes";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -11,11 +11,13 @@ export default function App({ Component, pageProps }: AppProps) {
       messages={pageProps.messages}
       defaultTranslationValues={{ b: (v) => <b>{v}</b> }}
     >
-      <Flowbite>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </Flowbite>
+      {
+        <DarkModeProvider attribute="class" disableTransitionOnChange>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </DarkModeProvider>
+      }
     </NextIntlProvider>
   );
 }
