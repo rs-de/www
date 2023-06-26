@@ -9,7 +9,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const { systemTheme } = useTheme();
   return (
     <Flowbite theme={{ dark: systemTheme === "dark" }}>
-      <div className="min-h-screen flex flex-col justify-between">
+      <div
+        className="min-h-screen flex flex-col justify-between
+       selection:text-white dark:selection:text-gray-800
+       selection:bg-gray-800 dark:selection:bg-gray-200"
+      >
         <Header />
         <main className="py-4 flex-1 flex flex-col gap-3 items-center text-center">
           {children}
