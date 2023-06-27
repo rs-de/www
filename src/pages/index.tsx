@@ -10,6 +10,7 @@ import Typography from "@/components/Typography";
 export default function Home() {
   const t = useTranslations();
   const locale = useLocale();
+
   return (
     <>
       <Head />
@@ -18,9 +19,9 @@ export default function Home() {
       </NextHead>
       <div className="w-full flex flex-col items-center p-3 bg-primary dark:bg-gray-700">
         <Typography className=" text-gray-100">
-          <h1>{t("welcome_title")}</h1>
-          <p>{t("welcome_description")}</p>
-          <p>{t("welcome_introduction")}</p>
+          <h1 className="text-gray-100">{t("welcome_title")}</h1>
+          <p>{t.rich("welcome_description")}</p>
+          <p>{t.rich("welcome_introduction")}</p>
           <A href="mailto:contact@rushsoft.de">
             <span className="font-bold dark:text-blue-300">{t("contact")}</span>
           </A>
@@ -97,9 +98,9 @@ const experiencesFrontendFrameworks = [
   { from: 2015, technology: "React" },
   { from: 2023, technology: "Next.js" },
   { from: 2023, technology: "tailwindcss" },
-  { from: 2016, to: 2022, technology: "Redux" },
-  { from: 2018, to: 2022, technology: "Redux Toolkit" },
-  { from: 2019, to: 2023, technology: "Material UI (MUI)" },
+  { from: 2016, technology: "Redux" },
+  { from: 2018, technology: "Redux Toolkit" },
+  { from: 2019, technology: "Material UI (MUI)" },
   { from: 2021, to: 2021, technology: "Vue" },
   { from: 2009, to: 2014, technology: "Zend Framework" },
 ];

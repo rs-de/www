@@ -1,6 +1,6 @@
-import { NextPageContext } from "next";
+import { GetStaticPropsContext } from "next";
 
-export async function getMessages(ctxt: NextPageContext) {
+export async function getMessages(ctxt: GetStaticPropsContext) {
   const defaultMessages = (
     await import(`./locales/${ctxt.defaultLocale}/global.json`)
   ).default;

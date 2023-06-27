@@ -16,5 +16,6 @@
   "experiences_description": "The <b>greyed out</b> ones are the ones I did not work with for more than a year. The numbers are updated annually.",
   "welcome_title": "I can help you!",
   "welcome_description": "If you are looking for an experienced javscript / React developer working remote or close to Stuttgart, Germany, I might be the right person for you. I am also available for consulting.",
-  "welcome_introduction": "I'm an opinionated full stack developer with a focus on frontend development in Typescript and React. I also have a lot of experience with backend development in javascript (Node.js, Express). I'm an advocate of agile development for a long time and I love to work in small teams. I'm also a big fan of open source software and I contribute to open source projects."
+  "welcome_introduction": "I'm an opinionated full stack developer with a focus on frontend development in <b>Typescript and React</b>. I also have a lot of experience with backend development in javascript (Node.js, Express). I'm an <b>advocate of agile software development</b> for a long time and I love to work in small teams. I'm also a big fan of open source software and I contribute to <b>open source</b> projects.",
+  "blog": "Blogposts"
 }
