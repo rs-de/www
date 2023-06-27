@@ -5,13 +5,22 @@ import { getMessages } from "@/i18n/getMessages";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import ReactMarkdown from "react-markdown";
 import fs from "fs/promises";
+import NextHead from "next/head";
+import { useRouter } from "next/router";
 
 export default function BlogPost({
   markdown,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const router = useRouter();
+  const { id, description } =
+    blogposts.find((post) => post.id === router.query?.id) ?? {};
   return (
     <>
       <Head />
+      <NextHead>
+        <title>{blogposts.find((post) => post.id === id)?.title}</title>
+        <meta name="description" content={description} />
+      </NextHead>
       <Typography className="text-left font-serif">
         <ReactMarkdown>{markdown}</ReactMarkdown>
       </Typography>
