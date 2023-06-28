@@ -16,7 +16,7 @@ export default function Blog() {
   return (
     <>
       <Head />
-      <Typography>
+      <Typography className="flex flex-col justify-evenly gap-4">
         <h1>{t("blog")}</h1>
         {blogposts.map(({ id, created, title, description }) => (
           <Card key={id} className="text-left">

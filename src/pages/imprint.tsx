@@ -36,7 +36,7 @@ export default function PageImprint() {
         <h2>Umsatzsteuer-ID</h2>
         <p>
           Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:
-          Musterustid.
+          00000/00000
         </p>
         <h2>Verantwortlich für den Inhalt nach § 55 Abs. 1 RStV:</h2>
         <p>siehe oben (Kontakt)</p>
