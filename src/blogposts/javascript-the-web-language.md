@@ -2,7 +2,7 @@
 
 If you think about human languages and assume you have to hire developers to build up a team you would very likely require the candidates to speak a language all understand. Since good communication is a key for software-development to be efficient and successful, it is clear that you need one language every team member understands.
 
-But what about programming languages? Basically the same thing: If possible you would use one language to build it.
+But what about programming languages? Basically the same thing: If possible you would use one language to implement an application.
 
 In the early days of my web development career it was normal to work with more than
 one programming language to build web applications.

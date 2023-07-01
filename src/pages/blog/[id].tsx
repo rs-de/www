@@ -2,11 +2,12 @@ import { blogposts } from "@/blogposts";
 import Head from "@/components/Head";
 import Typography from "@/components/Typography";
 import { getMessages } from "@/i18n/getMessages";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import ReactMarkdown from "react-markdown";
 import fs from "fs/promises";
 import NextHead from "next/head";
 import { useRouter } from "next/router";
+import getConfig from "next/config";
 
 export default function BlogPost({
   markdown,
@@ -39,7 +40,13 @@ export const getStaticProps: GetStaticProps = async (context) => ({
   },
 });
 
-export const getStaticPaths = async () => ({
-  paths: blogposts.map(({ id }) => ({ params: { id } })),
+const cartesian = (...a: Array<any[]>) =>
+  a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d, e].flat())));
+
+export const getStaticPaths: GetStaticPaths = async ({ locales }) => ({
+  paths: cartesian(
+    blogposts.map(({ id }) => id),
+    locales ?? []
+  ).map(([id, locale]) => ({ params: { id }, locale })),
   fallback: false,
 });
