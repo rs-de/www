@@ -18,7 +18,7 @@ export default function Home() {
       <NextHead>
         <title>Jochen Probst - Web application development</title>
       </NextHead>
-      <div className="w-full flex flex-col items-center p-4 bg-primary dark:bg-gray-700">
+      <div className="w-full flex flex-col items-center p-3 bg-primary dark:bg-gray-700">
         <Typography className=" text-gray-100 relative">
           <Avatar alt="Jochen Probst" size="lg" rounded img="/jp.jpeg">
             <h1 className="text-white mb-3 sm:mb-4">{t("welcome_title")}</h1>
@@ -33,7 +33,7 @@ export default function Home() {
           &nbsp;me.
         </Typography>
       </div>
-      <Typography>
+      <Typography className="p-3">
         <h1>{t("experiences")}</h1>
         <p>{t.rich("experiences_description")}</p>
         <h2>{t("programming_languages")}</h2>
@@ -73,7 +73,7 @@ export default function Home() {
             ))}
         </p>
       </Typography>
-      <Typography>
+      <Typography className="p-3">
         <h1>{t("companies_i_worked_for")}</h1>
         {companiesIWorkedFor.map(
           ({ name, href, [`href_${locale}`]: href_lang }) => (
