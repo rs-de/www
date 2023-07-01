@@ -13,7 +13,7 @@
   "companies_i_worked_for": "Companies I worked for",
   "tools": "Tools and libraries",
   "experiences": "My experience in numbers",
-  "experiences_description": "The lists do not include stuff \"I experimented with”, only if I used it in context of production applications (B2B apps, not accessible to the public). The <b>greyed out</b> items are the ones I did not work with for more than a year. The lists are updated annually.",
+  "experiences_description": "The lists do not include stuff \"I experimented with”, only if I used it in context of production applications. The <b>greyed out</b> items are the ones I did not work with for more than a year.",
   "welcome_title": "I can help you!",
   "welcome_description": "If you are looking for an experienced JavaScript / React developer working remote or close to Stuttgart, Germany, I might be the right person for you. I am also available for consulting.",
   "welcome_introduction": "I'm an opinionated senior software engineer with a focus on frontend development in <b>Typescript and React</b>, but I also have a lot of experience with backend dev. in JavaScript (Node.js, Express). I'm an <b>advocate of agile software development</b> for a long time and I love to work in small teams. I'm also a big fan of open source software and I contribute to <b>open source</b> projects.",
