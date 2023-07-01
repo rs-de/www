@@ -12,6 +12,19 @@ module.exports = {
       colors: {
         primary: "#3b82f6",
       },
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            h1: {
+              color: theme("colors.primary"),
+            },
+            h2: {
+              color: theme("colors.primary"),
+            },
+            pre: { "white-space": "pre-line" },
+          },
+        },
+      }),
     },
   },
 };

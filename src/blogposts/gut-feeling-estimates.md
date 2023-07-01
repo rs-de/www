@@ -43,7 +43,7 @@ It is good to plan such a estimate-refinement from the beginning on, together wi
 
 #### Motivation
 
-Even in an agile development team, the owner will ask for estimates.
+Even in an agile development, the owner will ask for estimates.
 This is something a developer has to accept. Most developers (or all!? ) do not
 like estimates, and this is not without reason. It is not because they just
 "do not like it". It is because they want to do it good, but they (especially

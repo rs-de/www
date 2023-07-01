@@ -21,7 +21,7 @@ export default function BlogPost({
         <title>{blogposts.find((post) => post.id === id)?.title}</title>
         <meta name="description" content={description} />
       </NextHead>
-      <Typography className="text-left font-serif">
+      <Typography className="text-left font-serif px-2">
         <ReactMarkdown>{markdown}</ReactMarkdown>
       </Typography>
     </>

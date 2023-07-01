@@ -1,8 +1,8 @@
-export function A({ children, href, target = "_blank" }: A) {
+export function A({ children, href, target = "_blank", className = "" }: A) {
   return (
     <a
       {...{ href, target }}
-      className="underline decoration-gray-500"
+      className={`${className} underline decoration-gray-500`}
       rel="norefferer noopener"
     >
       {children}

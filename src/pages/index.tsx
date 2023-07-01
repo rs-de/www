@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Fragment } from "react";
 import NextHead from "next/head";
 import Typography from "@/components/Typography";
+import { Avatar } from "flowbite-react";
 
 export default function Home() {
   const t = useTranslations();
@@ -15,15 +16,19 @@ export default function Home() {
     <>
       <Head />
       <NextHead>
-        <title>Jochen Probst</title>
+        <title>Jochen Probst - Web application development</title>
       </NextHead>
-      <div className="w-full flex flex-col items-center p-3 bg-primary dark:bg-gray-700">
-        <Typography className=" text-gray-100">
-          <h1 className="text-gray-100">{t("welcome_title")}</h1>
-          <p>{t.rich("welcome_description")}</p>
-          <p>{t.rich("welcome_introduction")}</p>
+      <div className="w-full flex flex-col items-center p-4 bg-primary dark:bg-gray-700">
+        <Typography className=" text-gray-100 relative">
+          <Avatar alt="Jochen Probst" size="lg" rounded img="/jp.jpeg">
+            <h1 className="text-white mb-3 sm:mb-4">{t("welcome_title")}</h1>
+          </Avatar>
+          <p className="text-justify">{t.rich("welcome_description")}</p>
+          <p className="text-justify">{t.rich("welcome_introduction")}</p>
           <A href="mailto:contact@rushsoft.de">
-            <span className="font-bold dark:text-blue-300">{t("contact")}</span>
+            <span className="font-bold text-white dark:text-blue-300">
+              {t("contact")}
+            </span>
           </A>
           &nbsp;me.
         </Typography>
@@ -50,12 +55,17 @@ export default function Home() {
           {tools
             .slice()
             .sort((a, b) => (a.stillInUse && !b.stillInUse ? -1 : 0))
-            .map(({ name, href, mainUseCase, stillInUse }, index) => (
-              <Fragment key={index}>
-                <span className={`${!stillInUse && "text-gray-400"}`}>
+            .map(({ name, href, mainUseCase, stillInUse }) => (
+              <Fragment key={name}>
+                <span>
                   <span>{mainUseCase}</span>:&nbsp;
-                  <A {...{ href }}>
-                    <b className={`${stillInUse && "text-blue-500"}`}>{name}</b>
+                  <A
+                    {...{ href }}
+                    className={`${
+                      stillInUse ? "text-primary" : "text-gray-400"
+                    }`}
+                  >
+                    <b>{name}</b>
                   </A>
                 </span>
                 <br />
@@ -101,7 +111,7 @@ const experiencesFrontendFrameworks = [
   { from: 2016, technology: "Redux" },
   { from: 2018, technology: "Redux Toolkit" },
   { from: 2019, technology: "Material UI (MUI)" },
-  { from: 2021, to: 2021, technology: "Vue" },
+  { from: 2019, technology: "storybook" },
   { from: 2009, to: 2014, technology: "Zend Framework" },
 ];
 
@@ -200,6 +210,12 @@ const tools = [
     name: "npm",
     href: "https://www.npmjs.com/",
     mainUseCase: "Package Manager",
+    stillInUse: true,
+  },
+  {
+    name: "knex.js",
+    href: "https://knexjs.org/",
+    mainUseCase: "RDMS Query Builder",
     stillInUse: true,
   },
   {

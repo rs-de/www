@@ -1,6 +1,6 @@
 export default function Typography({
   children,
-  className,
+  className = "",
 }: {
   children: React.ReactNode;
   className?: string;

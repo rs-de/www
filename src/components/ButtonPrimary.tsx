@@ -10,10 +10,11 @@ export default function ButtonPrimary({
   return (
     <Button
       theme={{
-        color: { primary: "bg-primary hover:bg-opacity-70 text-white" },
+        color: { primary: "bg-primary hover:bg-opacity-80 text-white" },
       }}
       color="primary"
       className={`${className}`}
+      outline
     >
       {children}
     </Button>
