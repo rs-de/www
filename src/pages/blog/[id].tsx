@@ -7,7 +7,6 @@ import ReactMarkdown from "react-markdown";
 import fs from "fs/promises";
 import NextHead from "next/head";
 import { useRouter } from "next/router";
-import getConfig from "next/config";
 
 export default function BlogPost({
   markdown,
