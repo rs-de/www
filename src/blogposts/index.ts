@@ -1,6 +1,6 @@
 export const blogposts = [
   {
-    id: "JavaScript-the-web-language",
+    id: "javascript-the-web-language",
     created: "2023-06-26",
     title: "PHP or JavaScript?",
     description:
