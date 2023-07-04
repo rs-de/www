@@ -16,7 +16,21 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Deployment
+## Docker image local testing
+
+Prerequisites: Docker client installed and docker daemon is running
+
+Build it
+
+```
+docker build -t rs-de-www:latest  .
+```
+
+Run it
+
+```
+docker compose up
+```
 
 ## References
 

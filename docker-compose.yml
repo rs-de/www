@@ -1,0 +1,6 @@
+version: "3"
+services:
+  node:
+    image: rs-de-www:latest
+    ports:
+      - 8080:8080
