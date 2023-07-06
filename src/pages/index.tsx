@@ -100,8 +100,8 @@ const experiencesProgrammingLanguages = [
   { from: 2021, technology: "TypeScript" },
   { from: 1999, to: 2018, technology: "PHP" },
   { from: 2003, to: 2006, technology: "Java" },
-  { from: 1999, to: 2001, technology: "C++" },
   { from: 2001, to: 2003, technology: "Visual Basic" },
+  { from: 1999, to: 2001, technology: "C++" },
 ];
 
 const experiencesFrontendFrameworks = [
