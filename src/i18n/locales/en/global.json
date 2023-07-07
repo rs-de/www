@@ -3,6 +3,7 @@
   "pageDescription": "Jochen Probst, senior software engineer working as freelancer for Web Application Development with JavaScript, React, express and node.js",
   "pageImpressumDescription": "Legal information about this website",
   "imprint": "Imprint",
+  "privacy": "Privacy",
   "contact": "Contact",
   "main": "Hello World!",
   "year": "{count, plural, =0 {Since this year} one {#{plus} year} other {#{plus} years}}",

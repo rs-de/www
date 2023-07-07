@@ -71,20 +71,6 @@ export default function PageImprint() {
           Bekanntwerden von Rechtsverletzungen werden derartige Links umgehend
           entfernt.
         </p>
-        <h2>Datenschutz</h2>
-        <p>
-          Die Nutzung dieser Webseite ist in der Regel ohne Angabe
-          personenbezogener Daten möglich. Soweit auf diesen Seiten
-          personenbezogene Daten (beispielsweise Name, Anschrift oder
-          eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets
-          auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche
-          Zustimmung nicht an Dritte weitergegeben. <br />
-          Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten
-          Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich
-          angeforderter Werbung und Informationsmaterialien wird hiermit
-          ausdrücklich widersprochen.
-          <br />
-        </p>
       </Typography>
     </>
   );
