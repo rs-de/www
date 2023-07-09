@@ -26,7 +26,7 @@ It is up to the receiver to manage the "risk" which amount of days to use.
 **This will lead us to to get (good!) estimates very fast.**
 
 Especially for longer ranges (starting with "week") it is important to ask
-again, at least one time e.g. arround 50% of the original estimated time has been
+again, at least one time e.g. around 50% of the original estimated time has been
 past. This allows us to use the developer's experience, which typically grows as we work on the project.
 It is good to plan such a estimate-refinement from the beginning on, together with the developer.
 
