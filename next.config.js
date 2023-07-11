@@ -8,6 +8,33 @@ const nextConfig = {
     locales: ["en", "de"],
     defaultLocale: "en",
   },
+  poweredByHeader: false,
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "strict-transport-security",
+            value: "max-age=63072000; includeSubDomains; preload",
+          },
+          { key: "x-frame-options", value: "SAMEORIGIN" },
+          { key: "x-content-type-options", value: "nosniff" },
+          { key: "x-xss-protection", value: "1; mode=block" },
+          { key: "referrer-policy", value: "same-origin" },
+          {
+            key: "content-security-policy",
+            value:
+              "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';",
+          },
+          {
+            key: "permissions-policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
