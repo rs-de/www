@@ -1,10 +1,11 @@
 ## Quality Assurance for Web Applications
 
-Once a web application is functional and it is ready for deployment one key step - serving business value - is achieved. Nice!
-But there is another step to do: **Quality Assurance (QA)**.
-Fortunately there are open source tools available to check several aspects of a web application.
+Once a web application is functional and ready for deployment one key step
+– serving business value — is achieved. Nice!
+But there is another thing to care about: **Quality Assurance (QA)**. Fortunately
+there are open source tools available to check several aspects of a web application.
 
-Since I just build up _this_ page, I applied some checks to it, too. I will describe the tools I used and the results I got.
+Since I just build up _this_ page, I checked it and I will describe the tools I used and the results I got.
 
 ### Google Lighthouse
 
@@ -12,17 +13,18 @@ Since I just build up _this_ page, I applied some checks to it, too. I will desc
 
 - Google Chrome Browser installed
 
-The first tool I used is [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/).
-Everybody who has a Google Chrome browser can use it. It is integrated in the developer tools.
-And you can open it by pressing _F12_ on MS Windows and _Command+Option+I_ on Mac.
-When I run it the page got pretty good results but the SEO (Search Engine Optimization) scores were not that good, because page meta tags where missing.
+The first tool is [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/).
+Everybody who has a Google Chrome browser installed can use it. It is integrated in the developer tools,
+to open it just press _F12_ on MS Windows and _Command+Option+I_ on Mac.
+When it run on my page, I got pretty good results but the SEO (Search Engine Optimization) scores were not that good, because page meta tags where missing.
 After I added the meta description tags to the page i got this:
 ![Google Lighthouse end result of rushsoft.de in 2023](/blog/lighthouse-result-rushsoft-de-2023.png)
-_This little color dots are a little "firework" google developers added to the tool, if an app achieves a score of 100% in all categories. :-)_
+_This little color dots are part of some "firework animation" google developers added to the tool, if an app achieves a score of 100% in all categories. :-)_
 
 Nice! 100% in all categories. But what does it mean? Let's have a look at the categories.
 Stop ... too much details. [80/20 rule](https://en.wikipedia.org/wiki/Pareto_principle). Only if there is something bad we have to investigate.
-
+And bad means: _red_ or _orange_, if the tool shows a _green_ result, usually it is good enough.
+In my case there was already a good result, and the effort to improve it was small (minutes), so I did it.
 Next tool, more about security ...
 
 ### OWASP ZAP
@@ -32,19 +34,19 @@ Next tool, more about security ...
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed
 
 The next tool I used is [OWASP ZAP](https://www.zaproxy.org/).
-It is a security tool to check web applications for security issues.
+It is a tool to check web applications for security issues.
 It is available as a desktop application and as a docker image.
-I used the docker image to check my page:
+I used the docker image to check my page (domain replaced by example):
 
 ```bash
-docker run -t owasp/zap2docker-stable zap-baseline.py -t https://www.rushsoft.de
+docker run -t owasp/zap2docker-stable zap-baseline.py -t https://www.example.com
 ```
 
-It is only a baseline check, but it is a good start. And it is easy to use, as you can see.
-The check crawls all pages which can be found by links on the page.
-(This is a good example to follow web standards and use anchors for links and not JavaScript: If you use JavaScript for links, the crawler would not find pages.)
+It is only a baseline, passive check, but it is a good start and easy to use, as you can see.
+ZAP crawls and requests all pages he can find and generates reports about it's findings.
+(A good example why it is important to use HTML's anchor element instead of JavaScript for links).
 
-Here is the result (I removed the passed checks, and the lines with the links to the pages, because they are not relevant for this post):
+Here is the result:
 
 ```bash
 WARN-NEW: Re-examine Cache-control Directives [10015] x 8
@@ -61,11 +63,13 @@ WARN-NEW: Timestamp Disclosure - Unix [10096] x 2
 WARN-NEW: Modern Web Application [10109] x 10
 ```
 
+I removed the passed checks, and the lines with the links to the pages, because they are not relevant for this post.
+
 The result is not that bad. The warnings are mostly about missing HTTP response headers.
 Since the page is build with [Next.js](https://nextjs.org/), but not deployed via [Vercel](https://vercel.com/), this headers needs to be added manually.
 
 Unfortunately one header could not being fixed (without hacks) - the first one: _Re-examine Cache-control Directives_.
-(If you use frameworks, you have to accept limitations, sometimes.)
+If you use frameworks, you have to accept limitations, sometimes.
 
 ### Conclusion
 
