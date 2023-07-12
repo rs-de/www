@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { DarkThemeToggle, Navbar } from "flowbite-react";
+import { DarkThemeToggle, Navbar, Tooltip } from "flowbite-react";
 import Typography from "./Typography";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
+import { NavbarLink } from "./NavbarLink";
+import { VscGithubInverted } from "react-icons/vsc";
 
 export function Header() {
   const [top, setTop] = useState(true);
@@ -45,15 +47,22 @@ export function Header() {
           </div>
         </Typography>
       </Navbar.Brand>
-      <DarkThemeToggle className="ml-auto mr-3" />
-      <Navbar.Toggle />
+      <div className="flex md:order-2">
+        <Tooltip content={t("toggle_dark_mode")}>
+          <DarkThemeToggle />
+        </Tooltip>
+        <Navbar.Toggle />
+      </div>
       <Navbar.Collapse>
-        <Navbar.Link href="/blog" as={Link} active={pathname === "/blog"}>
-          Blog
-        </Navbar.Link>
-        <Navbar.Link href={`mailto:contact@rushsoft.de`}>
+        <NavbarLink href="/blog">Blog</NavbarLink>
+        <NavbarLink href={`mailto:contact@rushsoft.de`}>
           {t("contact")}
-        </Navbar.Link>
+        </NavbarLink>
+        <NavbarLink href="https://github.com/rs-de/www" target="_blank">
+          <Tooltip content={t("view_on_github")}>
+            <VscGithubInverted size={20} />
+          </Tooltip>
+        </NavbarLink>
       </Navbar.Collapse>
     </Navbar>
   );

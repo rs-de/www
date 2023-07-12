@@ -18,5 +18,7 @@
   "welcome_title": "I can help you!",
   "welcome_description": "If you are looking for an experienced JavaScript / React developer working remote or close to Stuttgart, Germany, I might be the right person for you. I am also available for consulting.",
   "welcome_introduction": "I'm an independent senior software engineer focusing on frontend development in <b>Typescript and React</b>, however I also have a lot of experience with backend dev. in JavaScript (Node.js, Express) together with common standards like SQL, REST and HTTP. I have been an <b>advocate of agile software development</b> for a long time. In addition I'm a big fan of open source software and I contribute to <b>open source</b> projects.",
-  "blog": "Blogposts"
+  "blog": "Blogposts",
+  "view_on_github": "View on GitHub",
+  "toggle_dark_mode": "Toggle dark mode"
 }
