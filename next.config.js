@@ -23,15 +23,20 @@ const nextConfig = {
           { key: "x-xss-protection", value: "1; mode=block" },
           { key: "referrer-policy", value: "same-origin" },
           {
-            key: "content-security-policy",
-            value:
-              "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';",
-          },
-          {
             key: "permissions-policy",
             value: "camera=(), microphone=(), geolocation=()",
           },
-        ],
+        ].concat(
+          process.env.NODE_ENV === "production"
+            ? [
+                {
+                  key: "content-security-policy",
+                  value:
+                    "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';",
+                },
+              ]
+            : []
+        ),
       },
     ];
   },
