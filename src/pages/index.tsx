@@ -213,6 +213,12 @@ const tools = [
     stillInUse: true,
   },
   {
+    name: "Cypress",
+    href: "https://www.cypress.io/",
+    mainUseCase: "End-to-End Testing",
+    stillInUse: true,
+  },
+  {
     name: "knex.js",
     href: "https://knexjs.org/",
     mainUseCase: "RDMS Query Builder",
