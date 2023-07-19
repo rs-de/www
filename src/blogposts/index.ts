@@ -1,5 +1,11 @@
 export const blogposts = [
   {
+    id: "artificial-intelligence-developer-support",
+    created: "2023-07-19",
+    title: "Artificial intelligence developer support",
+    description: "Example how AI supports developers in 2023",
+  },
+  {
     id: "web-app-quality-assurance",
     created: "2023-07-11",
     title: "Web application quality assurance",
