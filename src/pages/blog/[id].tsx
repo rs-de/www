@@ -8,6 +8,9 @@ import fs from "fs/promises";
 import NextHead from "next/head";
 import { useRouter } from "next/router";
 
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark as shStyle } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
 export default function BlogPost({
   markdown,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
@@ -22,7 +25,27 @@ export default function BlogPost({
         <meta name="description" content={description} />
       </NextHead>
       <Typography className="text-left font-serif px-2">
-        <ReactMarkdown>{markdown}</ReactMarkdown>
+        <ReactMarkdown
+          components={{
+            code({ inline, children, ...props }) {
+              return !inline ? (
+                <SyntaxHighlighter
+                  {...props}
+                  // eslint-disable-next-line react/no-children-prop
+                  children={String(children).replace(/\n$/, "")}
+                  language={"tsx"}
+                  PreTag="div"
+                  style={{ ...shStyle }}
+                  className="rounded-md"
+                />
+              ) : (
+                <code {...props}>{children}</code>
+              );
+            },
+          }}
+        >
+          {markdown}
+        </ReactMarkdown>
       </Typography>
     </>
   );
