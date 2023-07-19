@@ -2,10 +2,22 @@ Web application for blog posts and portfolio with i18n support based on Next.js.
 
 ## Development
 
-Clone this repo, change into created directory (www) and install dependencies:
+### Prerequisites
+
+git and node installed
+
+### Installation
+
+Go to shell, change into your projects directory (e.g ~/dev):
 
 ```bash
-npm i
+mkdir -p rs-de && cd rs-de
+```
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/rs-de/www && cd www && npm i
 ```
 
 Run development server:
