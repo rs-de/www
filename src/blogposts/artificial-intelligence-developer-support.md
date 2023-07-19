@@ -188,4 +188,4 @@ _First:_ I will continue using GCC. It seems to save time, at least because gett
 examples and hints is so close to the code.  
 _But:_ The developer has to know what he is doing. I believe it does not make sense
 to tell junior developers not to use it – since they will ;-) – But they should
-ask themselves "Do i understand the code?" and learn, if not.
+carefully read the generated code and ask themselves "Do i understand the code?" and learn, if not.
