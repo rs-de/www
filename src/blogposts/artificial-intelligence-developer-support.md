@@ -1,6 +1,6 @@
 ## Artificial Intelligence developer support: An example in 2023
 
-Using new stuff in side projects is a good way to learn. In this post I will document usage of Github Copilot while implementing some feature to my site.
+Using new stuff in side projects is a good way to learn. In this post I will document usage of [Github Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) (GCC) while implementing some feature to my site.
 
 ### Context
 
@@ -18,7 +18,7 @@ Some documents written in english and formatted in markdown should be auto trans
 1. Save the translated files to a given directory
 1. Use the translated versions in the website
 
-### Implementation with support of [Github Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) (GCC) and [DeepL api](https://www.deepl.com/pro-api)
+### Implementation with support of GCC and [DeepL api](https://www.deepl.com/pro-api)
 
 At the time of writing this post, GCC was in preview and only available for [VSCode Insiders](https://code.visualstudio.com/insiders/).
 
