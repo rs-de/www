@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "echo \"http://$(ipconfig getifaddr en0):3000/\" && next start",
     "prepare": "husky install",
-    "lint": "next lint"
+    "lint": "next lint",
+    "translateBlogposts": "ts-node src/i18n/translate-documents.mts"
   },
   "dependencies": {
     "@types/node": "^20.3.1",

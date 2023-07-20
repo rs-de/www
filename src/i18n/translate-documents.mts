@@ -5,21 +5,32 @@ const API_KEY = process.env.API_KEY_DEEPL ?? "";
 
 const SOURCE_PATH = "src/blogposts";
 const TARGET_PATH = "src/i18n/locales";
+const targetLanguage = "de";
 
-const language = "de";
-const sourceFile = `${process.cwd()}/${SOURCE_PATH}/gut-feeling-estimates.md`;
-const translatedDocument = await translateMarkdownDocument(
-  sourceFile,
-  language
+const markdownFiles = await findMarkdownFiles(
+  `${process.cwd()}/${SOURCE_PATH}`
 );
-const filename = path.basename(sourceFile);
-const targetPath = `${process.cwd()}/${TARGET_PATH}/${language}/blogposts/${filename}`;
-await fs.promises.mkdir(targetPath, { recursive: true });
-await fs.promises.writeFile(
-  `${targetPath}/${filename}`,
-  translatedDocument,
-  "utf8"
-);
+
+//better to translate serially to not overload the service
+markdownFiles.forEach(async (markdownFile) => {
+  const filename = path.basename(markdownFile);
+  const targetPath = `${process.cwd()}/${TARGET_PATH}/${targetLanguage}/blogposts/`;
+  const targetFile = `${targetPath}/${filename}`;
+
+  //blocking is ok, as long as we process serially
+  if (fs.existsSync(targetFile)) {
+    console.log(`File ${targetFile} already exists, skipping`);
+    return;
+  }
+
+  const translatedDocument = await translateMarkdownDocument(
+    markdownFile,
+    targetLanguage
+  );
+
+  await fs.promises.mkdir(targetPath, { recursive: true });
+  await fs.promises.writeFile(targetFile, translatedDocument, "utf8");
+});
 
 //translate a markdown do given by path with DeepL api leverage fetch api
 async function translateMarkdownDocument(
@@ -50,4 +61,13 @@ async function translateMarkdownDocument(
 
   const responseObj = await response.json();
   return responseObj.translations[0].text;
+}
+
+async function findMarkdownFiles(directoryPath: string): Promise<string[]> {
+  const files = await fs.promises.readdir(directoryPath);
+  const markdownFiles = files.filter((file) => path.extname(file) === ".md");
+  const markdownFilePaths = markdownFiles.map((file) =>
+    path.join(directoryPath, file)
+  );
+  return markdownFilePaths;
 }

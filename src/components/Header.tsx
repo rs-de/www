@@ -48,9 +48,7 @@ export function Header() {
         </Typography>
       </Navbar.Brand>
       <div className="flex md:order-2">
-        <Tooltip content={t("toggle_dark_mode")}>
-          <DarkThemeToggle />
-        </Tooltip>
+        <DarkThemeToggle />
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>

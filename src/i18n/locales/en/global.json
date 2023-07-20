@@ -1,6 +1,6 @@
 {
   "pageTitle": "'<JP'> WebAppDev",
-  "pageDescription": "Jochen Probst, senior software engineer working as freelancer for Web Application Development with JavaScript, React, express and node.js",
+  "pageDescription": "Jochen Probst, senior software engineer working as freelancer for Web Application Development with JavaScript/TypeScript, React, Node.js and express.",
   "pageImpressumDescription": "Legal information about this website",
   "imprint": "Imprint",
   "privacy": "Privacy",
@@ -17,8 +17,9 @@
   "experiences_description": "The lists do not include things \"I experimented with”, only if I used them in context of production applications. The <b>greyed out</b> are the ones I haven't been working with for more than a year.",
   "welcome_title": "I can help you!",
   "welcome_description": "If you are looking for an experienced JavaScript / React developer working remote or close to Stuttgart, Germany, I might be the right person for you. I am also available for consulting.",
-  "welcome_introduction": "I'm an independent senior software engineer focusing on frontend development in <b>Typescript and React</b>, however I also have a lot of experience with backend dev. in JavaScript (Node.js, Express) together with common standards like SQL, REST and HTTP. I have been an <b>advocate of agile software development</b> for a long time. In addition I'm a big fan of open source software and I contribute to <b>open source</b> projects.",
+  "welcome_introduction": "I'm an independent senior software engineer focusing on frontend development in <b>TypeScript and React</b>, however I also have a lot of experience with backend dev. in JavaScript (Node.js, Express) together with common standards like SQL, REST and HTTP. I have been an <b>advocate of agile software development</b> for a long time. In addition I'm a big fan of open source software and I contribute to <b>open source</b> projects.",
   "blog": "Blogposts",
   "view_on_github": "View on GitHub",
-  "toggle_dark_mode": "Toggle dark mode"
+  "toggle_dark_mode": "Toggle dark mode",
+  "beware_auto_translation": "Beware: This page is automatically translated by Google Translate"
 }

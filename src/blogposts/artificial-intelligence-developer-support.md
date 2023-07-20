@@ -28,7 +28,7 @@ The heart of the MVP is the translation of the markdown files, so lets start and
 
 ##### **translate-documents.ts**
 
-```typescript
+```
 
 ```
 
@@ -135,7 +135,7 @@ translateMarkdownDocument(documentPath, targetLanguage)
 Crazy, right? GCC even added an example usage of the function it created.
 
 The next thing to correct was the mixture of sync and async code, since a synchronous call
-is blocking the event loop and should be avoided. So i told GCC to make the function async, and voila GCC did it.
+is blocking the event loop and should be avoided. So I told GCC to make the function async, and voila GCC did it.
 
 #### Does the translation function work?
 
@@ -189,3 +189,5 @@ examples and hints is so close to the code.
 _But:_ The developer has to know what he is doing. I believe it does not make sense
 to tell junior developers not to use it – since they will ;-) – But they should
 carefully read the generated code and ask themselves "Do i understand the code?" and learn, if not.
+
+And last but not least, here the [translated version (german)](/de/blog/artificial-intelligence-developer-support/)
