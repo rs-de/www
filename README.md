@@ -44,6 +44,26 @@ Run it
 docker compose up
 ```
 
+## Deployment
+
+### From local machine
+
+#### Prerequisites
+
+- [flyctl](https://fly.io/docs/flyctl/) installed and logged in by `flyctl auth login`
+
+#### Deploy
+
+In project-root directory run:
+
+```bash
+flyctl deploy .
+```
+
+### CI/CD
+
+Deployed automatically by github action on push to main branch.
+
 ## References
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
