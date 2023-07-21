@@ -34,6 +34,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
             className="whitespace-nowrap"
           />
           <Footer.LinkGroup className="flex gap-2">
+            <Footer.Link href={"/blog"} as={Link}>
+              Blog
+            </Footer.Link>
             <Footer.Link href={`/imprint`} as={Link}>
               {t("imprint")}
             </Footer.Link>
