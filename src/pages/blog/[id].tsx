@@ -18,6 +18,7 @@ import { atomDark as shStyle } from "react-syntax-highlighter/dist/cjs/styles/pr
 import { Alert } from "flowbite-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { cartesian } from "@/lib/cartesian";
 
 export default function BlogPost({
   markdown,
@@ -108,9 +109,6 @@ async function loadMarkdown(context: GetStaticPropsContext) {
     return await fs.readFile(`./src/blogposts/${id}.md`, "utf8");
   }
 }
-
-const cartesian = (...a: Array<any[]>) =>
-  a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d, e].flat())));
 
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => ({
   paths: cartesian(

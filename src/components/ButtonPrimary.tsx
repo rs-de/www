@@ -1,12 +1,10 @@
-import { Button } from "flowbite-react";
+import { Button, ButtonProps } from "flowbite-react";
 
 export default function ButtonPrimary({
   children,
   className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+  ...rest
+}: ButtonProps) {
   return (
     <Button
       theme={{
@@ -15,6 +13,7 @@ export default function ButtonPrimary({
       color="primary"
       className={`${className}`}
       outline
+      {...rest}
     >
       {children}
     </Button>
