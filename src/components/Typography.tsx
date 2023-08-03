@@ -6,9 +6,7 @@ export default function Typography({
   className?: string;
 }) {
   return (
-    <div
-      className={`format lg:format-lg dark:format-invert w-full ${className}`}
-    >
+    <div className={`prose lg:prose-lg w-full prose-slate ${className}`}>
       {children}
     </div>
   );

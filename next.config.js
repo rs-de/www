@@ -2,7 +2,6 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  trailingSlash: true,
   output: "standalone",
   i18n: {
     locales: ["en", "de"],

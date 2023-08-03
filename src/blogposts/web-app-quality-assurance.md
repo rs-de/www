@@ -17,7 +17,7 @@ The first tool is [Google Lighthouse](https://developers.google.com/web/tools/li
 Everybody who has a Google Chrome browser installed can use it. It is integrated in the developer tools,
 to open it just press _F12_ on MS Windows and _Command+Option+I_ on Mac.
 When it run on my page, I got pretty good results but the SEO (Search Engine Optimization) scores were not that good, because page meta tags where missing.
-After I added the meta description tags to the page i got this:
+After I added the meta description tags to the page I got this:
 ![Google Lighthouse end result of rushsoft.de in 2023](/blog/lighthouse-result-rushsoft-de-2023.png)
 _This little color dots are part of some "firework animation" google developers added to the tool, if an app achieves a score of 100% in all categories. :-)_
 

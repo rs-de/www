@@ -6,7 +6,6 @@ import { useLocale, useTranslations } from "next-intl";
 import { Fragment } from "react";
 import NextHead from "next/head";
 import Typography from "@/components/Typography";
-import { Avatar } from "flowbite-react";
 
 export default function Home() {
   const t = useTranslations();
@@ -18,15 +17,26 @@ export default function Home() {
       <NextHead>
         <title>Jochen Probst - Web application development</title>
       </NextHead>
-      <div className="w-full flex flex-col items-center p-3 bg-primary dark:bg-gray-700">
-        <Typography className=" text-gray-100 relative">
-          <Avatar alt="Jochen Probst" size="lg" rounded img="/jp.jpeg">
-            <h1 className="text-white mb-3 sm:mb-4">{t("welcome_title")}</h1>
-          </Avatar>
+      <div className="w-full flex flex-col items-center p-3 bg-primary-10 dark:bg-primary-3">
+        <Typography className="text-white dark:text-slate-12">
+          <div className="flex justify-center">
+            <div className="flex items-center gap-4">
+              <picture>
+                <img
+                  className={"rounded-full"}
+                  src={"/jp.jpeg"}
+                  alt={"Jochen Probst"}
+                  width={80}
+                  height={80}
+                />
+              </picture>
+              <h1 className="text-white !m-0">{t("welcome_title")}</h1>
+            </div>
+          </div>
           <p className="text-justify">{t.rich("welcome_description")}</p>
           <p className="text-justify">{t.rich("welcome_introduction")}</p>
           <A href="mailto:contact@rushsoft.de">
-            <span className="font-bold text-white dark:text-blue-300">
+            <span className="font-bold text-white dark:text-primary-11">
               {t("contact")}
             </span>
           </A>

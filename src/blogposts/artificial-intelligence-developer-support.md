@@ -32,9 +32,9 @@ The heart of the MVP is the translation of the markdown files, so lets start and
 
 ```
 
-It is empty, since i want to use GCC: Let AI do the initial work. So i just right clicked into the file in order to see how to start GCC (nowbody can remember all the commands, right?) and i got this:
+It is empty, since I want to use GCC: Let AI do the initial work. So I just right clicked into the file in order to see how to start GCC (nowbody can remember all the commands, right?) and I got this:
 ![context menu to start GCC](/blog/ai-example-01.png)
-I clicked **Start Code Chat** and got a chat dialog, where i could tell GCC what i want it to do:
+I clicked **Start Code Chat** and got a chat dialog, where I could tell GCC what I want it to do:
 ![GCC chat dialog](/blog/ai-example-02.png)
 It took about 5 seconds and GCC came up with this:
 
@@ -82,7 +82,7 @@ async function translateMarkdownDocument(
 Wow! Not bad.  
 But this is a good example that the human user has to judge and adapt the result.
 First, I did not like the usage of axios as http client, which would require to install it.
-Since it is good to avoid extra packages i just told GCC to leverage node's build-in fetch api instead:
+Since it is good to avoid extra packages I just told GCC to leverage node's build-in fetch api instead:
 
 > translate a markdown document given by path with DeepL api leverage fetch api
 
@@ -188,6 +188,6 @@ _First:_ I will continue using GCC. It seems to save time, at least because gett
 examples and hints is so close to the code.  
 _But:_ The developer has to know what he is doing. I believe it does not make sense
 to tell junior developers not to use it – since they will ;-) – But they should
-carefully read the generated code and ask themselves "Do i understand the code?" and learn, if not.
+carefully read the generated code and ask themselves "Do I understand the code?" and learn, if not.
 
 And last but not least, here the [translated version (german)](/de/blog/artificial-intelligence-developer-support/)

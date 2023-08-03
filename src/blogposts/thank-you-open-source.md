@@ -16,10 +16,10 @@ How can we contribute? Here are some ways:
 I decided to go with two options:
 
 1. I published own projects, and I decided to do this on github in context of a team ([pubcore](https://github.com/pubcore))
-1. I donated small amounts on a monthly basis to 2 favorite projects i was using. [opencollective](https://opencollective.com/).
+1. I donated small amounts on a monthly basis to 2 favorite projects I was using. [opencollective](https://opencollective.com/).
 
 Even if most of the stuff you publish will not being used by others, it is a good experience to learn how to publish and maintain a project.
 You never know what other people might find useful, even if something is "bad" it might be used to have "bad" examples!
-So it happened to me: Most of the stuff I published, I do not use anymore, because other projects did better and i switched, but some got used (e.g. [iso-language-codes](https://www.npmjs.com/package/iso-language-codes)).
+So it happened to me: Most of the stuff I published, I do not use anymore, because other projects did better and I switched, but some got used (e.g. [iso-language-codes](https://www.npmjs.com/package/iso-language-codes)).
 
 Contribution to open source is no waste of time.

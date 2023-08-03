@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import { NextIntlProvider } from "next-intl";
 import type { AppProps } from "next/app";
 import { Layout } from "@/components/Layout";
-import { ThemeProvider as DarkModeProvider } from "next-themes";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,11 +11,9 @@ export default function App({ Component, pageProps }: AppProps) {
       defaultTranslationValues={{ b: (v) => <b>{v}</b> }}
     >
       {
-        <DarkModeProvider attribute="class" disableTransitionOnChange>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </DarkModeProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       }
     </NextIntlProvider>
   );

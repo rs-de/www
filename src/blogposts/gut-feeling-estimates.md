@@ -55,7 +55,7 @@ One option dev-teams choose is to use adjectives like "high", "medium" and "low"
 But the issue is that for all participants it is not obviously clear what this units mean (think of new team members).
 What does it mean for a task to be a "high" effort? It is required to maintain some definition of this units.
 This kind of units do not support communication, they complicate it. On the other hand,
-If i get a statement like "This will take weeks" I know what it means. Why not plan with it?
+If I get a statement like "This will take weeks" I know what it means. Why not plan with it?
 
 ###### References
 
