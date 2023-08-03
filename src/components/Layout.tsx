@@ -5,7 +5,10 @@ import Navbar from "./Navbar";
 export function Layout({ children }: { children: React.ReactNode }) {
   const t = useTranslations();
   return (
-    <>
+    <div
+      className="box-border bg-primary-1 selection:text-white dark:selection:text-gray-800
+    selection:bg-gray-800 dark:selection:bg-gray-200 min-h-screen flex flex-col justify-between antialiased"
+    >
       <Navbar />
       <main className="flex-1 flex flex-col gap-3 items-center text-center">
         {children}
@@ -32,6 +35,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </Link>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
