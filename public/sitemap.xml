@@ -1,0 +1,32 @@
+<xml version="1.0" encoding="UTF-8">
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <url>
+            <loc>https://www.rushsoft.de</loc>
+            <lastmod>2023-08-01</lastmod>
+        </url>
+        <url>
+            <loc>https://www.rushsoft.de/blog</loc>
+            <lastmod>2023-08-01</lastmod>
+        </url>
+        <url>
+            <loc>https://www.rushsoft.de/blog/artificial-intelligence-developer-support</loc>
+            <lastmod>2023-08-01</lastmod>
+        </url>
+        <url>
+            <loc>https://www.rushsoft.de/blog/web-app-quality-assurance</loc>
+            <lastmod>2023-08-01</lastmod>
+        </url>
+        <url>
+            <loc>https://www.rushsoft.de/blog/javascript-the-web-language</loc>
+            <lastmod>2023-08-01</lastmod>
+        </url>
+        <url>
+            <loc>https://www.rushsoft.de/blog/thank-you-open-source</loc>
+            <lastmod>2023-08-01</lastmod>
+        </url>
+        <url>
+            <loc>https://www.rushsoft.de/blog/gut-feeling-estimates</loc>
+            <lastmod>2023-08-01</lastmod>
+        </url>
+    </urlset>
+</xml>
