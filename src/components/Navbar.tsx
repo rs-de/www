@@ -57,6 +57,14 @@ export default function Navbar() {
       <div className="text-slate-11">
         <Link href={`/`}>
           <div className="flex items-center h-[40px] ">
+            <Image
+              priority
+              width={80}
+              height={40}
+              alt="<JP>"
+              src="/logo.svg"
+              className="mr-2"
+            />
             <b>Jochen Probst</b>
           </div>
           <div className="tracking-[0.05em] leading-4 pl-[3px]">
