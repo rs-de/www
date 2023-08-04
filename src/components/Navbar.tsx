@@ -15,6 +15,7 @@ export default function Navbar() {
   const menueItems = useMemo(
     () => [
       { href: "/blog", label: "Blog" },
+      { href: "/projects", label: t("projects") },
       { href: "mailto:contact@rushsoft.de", label: t("contact") },
       {
         href: "https://github.com/rs-de/www",
