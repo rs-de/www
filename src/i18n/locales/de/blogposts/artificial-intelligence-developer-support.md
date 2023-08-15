@@ -33,9 +33,9 @@ Das Herzstück des MVP ist die Übersetzung der Markdown-Dateien, also fangen wi
 ```
 
 Sie ist leer, da ich GCC verwenden möchte: Lass AI die erste Arbeit machen. Also habe ich einfach mit der rechten Maustaste in die Datei geklickt, um zu sehen, wie man GCC startet (jeder kann sich doch alle Befehle merken, oder?) und ich bekam das hier:
-![Kontextmenü zum Starten von GCC](/blog/ai-example-01.png)
+![Kontextmenü zum Starten von GCC](/img/blog/ai-example-01.png)
 Ich klickte auf **Start Code Chat** und bekam einen Chat-Dialog, in dem ich GCC sagen konnte, was ich tun wollte:
-![GCC Chat-Dialog](/blog/ai-example-02.png)
+![GCC Chat-Dialog](/img/blog/ai-example-02.png)
 Es dauerte etwa 5 Sekunden und GCC zeigte mir folgendes an:
 
 ```

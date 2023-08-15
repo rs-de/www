@@ -18,7 +18,7 @@ Everybody who has a Google Chrome browser installed can use it. It is integrated
 to open it just press _F12_ on MS Windows and _Command+Option+I_ on Mac.
 When it run on my page, I got pretty good results but the SEO (Search Engine Optimization) scores were not that good, because page meta tags where missing.
 After I added the meta description tags to the page I got this:
-![Google Lighthouse end result of rushsoft.de in 2023](/blog/lighthouse-result-rushsoft-de-2023.png)
+![Google Lighthouse end result of rushsoft.de in 2023](/img/blog/lighthouse-result-rushsoft-de-2023.png)
 _This little color dots are part of some "firework animation" google developers added to the tool, if an app achieves a score of 100% in all categories. :-)_
 
 Nice! 100% in all categories. But what does it mean? Let's have a look at the categories.

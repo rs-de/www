@@ -1,4 +1,4 @@
-import { blogposts } from "@/blogposts";
+import { blogposts } from "@/i18n/locales/en/blogposts";
 import Head from "@/components/Head";
 import Typography from "@/components/Typography";
 import { getMessages } from "@/i18n/getMessages";
@@ -17,6 +17,7 @@ import { atomDark as shStyle } from "react-syntax-highlighter/dist/cjs/styles/pr
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { cartesian } from "@/lib/cartesian";
+import { loadMarkdown } from "@/lib/loadMarkdown";
 
 export default function BlogPost({
   markdown,
@@ -89,23 +90,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     return { notFound: true };
   }
 };
-
-async function loadMarkdown(context: GetStaticPropsContext) {
-  const locale = context.locale;
-  const id = encodeURIComponent(String(context.params?.id ?? ""));
-
-  if (!blogposts.find((post) => post.id === id)) {
-    throw new Error("Not found");
-  }
-  if (locale && locale !== "en") {
-    return await fs.readFile(
-      `./src/i18n/locales/${locale}/blogposts/${id}.md`,
-      "utf8"
-    );
-  } else {
-    return await fs.readFile(`./src/blogposts/${id}.md`, "utf8");
-  }
-}
 
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => ({
   paths: cartesian(

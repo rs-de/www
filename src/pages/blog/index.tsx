@@ -1,17 +1,17 @@
-import { blogposts } from "@/blogposts";
+import { blogposts } from "@/i18n/locales/en/blogposts";
 import { ButtonPrimary } from "@/components/Button";
 import DateOfCreation from "@/components/DateOfCreation";
 import Head from "@/components/Head";
 import Typography from "@/components/Typography";
 import { getMessages } from "@/i18n/getMessages";
 import { NextPageContext } from "next";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
 
 export default function Blog() {
   const t = useTranslations();
-
+  const locale = useLocale();
   return (
     <>
       <Head />
@@ -33,7 +33,7 @@ export default function Blog() {
                   </small>
                 </p>
               </div>
-              <Link href={`/blog/${id}`} className="no-underline">
+              <Link href={`/${locale}/blog/${id}`} className="no-underline">
                 <ButtonPrimary className="w-full">
                   Read more <ArrowSmallRightIcon className="h-6 w-6" />
                 </ButtonPrimary>
@@ -46,6 +46,7 @@ export default function Blog() {
     </>
   );
 }
+
 export const getStaticProps = async (context: NextPageContext) => ({
   props: {
     messages: await getMessages(context),

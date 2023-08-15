@@ -1,4 +1,4 @@
-Web application for blog posts and portfolio with i18n support based on Next.js.
+Static generated web site (SSG) based on Next.js.
 
 ## Development
 
@@ -30,6 +30,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Docker image local testing
 
+do
 Prerequisites: Docker client installed and docker daemon is running
 
 Build it

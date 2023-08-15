@@ -3,7 +3,8 @@ import fs from "fs";
 import path from "path";
 const API_KEY = process.env.API_KEY_DEEPL ?? "";
 
-const SOURCE_PATH = "src/blogposts";
+const DIR = "projects";
+const SOURCE_PATH = `src/i18n/locales/en/${DIR}`;
 const TARGET_PATH = "src/i18n/locales";
 const targetLanguage = "de";
 
@@ -14,7 +15,7 @@ const markdownFiles = await findMarkdownFiles(
 //better to translate serially to not overload the service
 markdownFiles.forEach(async (markdownFile) => {
   const filename = path.basename(markdownFile);
-  const targetPath = `${process.cwd()}/${TARGET_PATH}/${targetLanguage}/blogposts/`;
+  const targetPath = `${process.cwd()}/${TARGET_PATH}/${targetLanguage}/${DIR}/`;
   const targetFile = `${targetPath}/${filename}`;
 
   //blocking is ok, as long as we process serially

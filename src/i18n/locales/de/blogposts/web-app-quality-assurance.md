@@ -1,9 +1,10 @@
 ## Qualitätssicherung für Webanwendungen
 
 Sobald eine Webanwendung funktionsfähig und einsatzbereit ist, ist ein wichtiger Schritt getan.
+
 - die Bereitstellung des Geschäftswerts - ist erreicht. Schön!
-Aber es gibt noch eine weitere Sache, um die man sich kümmern muss: **Qualitätssicherung (QA)**. Glücklicherweise
-gibt es Open-Source-Tools, mit denen verschiedene Aspekte einer Webanwendung überprüft werden können.
+  Aber es gibt noch eine weitere Sache, um die man sich kümmern muss: **Qualitätssicherung (QA)**. Glücklicherweise
+  gibt es Open-Source-Tools, mit denen verschiedene Aspekte einer Webanwendung überprüft werden können.
 
 Da ich gerade _diese_ Seite aufbaue, habe ich sie überprüft und werde die verwendeten Tools und die Ergebnisse beschreiben, die ich erhalten habe.
 
@@ -18,8 +19,8 @@ Jeder, der einen Google Chrome Browser installiert hat, kann es nutzen. Es ist i
 um es zu öffnen, drücken Sie einfach _F12_ auf MS Windows und _Befehl+Wahl+I_ auf Mac.
 Als es auf meiner Seite lief, bekam ich ziemlich gute Ergebnisse, aber die SEO (Search Engine Optimization) Ergebnisse waren nicht so gut, weil die Meta-Tags der Seite fehlten.
 Nachdem ich die Meta-Beschreibungs-Tags auf der Seite hinzugefügt hatte, erhielt ich folgendes Ergebnis:
-![Google Lighthouse Endergebnis von rushsoft.de im Jahr 2023](/blog/lighthouse-result-rushsoft-de-2023.png)
-Diese kleinen farbigen Punkte sind Teil einer "Feuerwerk-Animation", die die Google-Entwickler dem Tool hinzugefügt haben, wenn eine App eine Punktzahl von 100% in allen Kategorien erreicht :-)_
+![Google Lighthouse Endergebnis von rushsoft.de im Jahr 2023](/img/blog/lighthouse-result-rushsoft-de-2023.png)
+Diese kleinen farbigen Punkte sind Teil einer "Feuerwerk-Animation", die die Google-Entwickler dem Tool hinzugefügt haben, wenn eine App eine Punktzahl von 100% in allen Kategorien erreicht :-)\_
 
 Toll! 100% in allen Kategorien. Aber was bedeutet das? Werfen wir einen Blick auf die Kategorien.
 Stopp ... zu viele Details. [80/20-Regel] (https://en.wikipedia.org/wiki/Pareto_principle). Nur wenn es etwas Schlimmes gibt, müssen wir nachforschen.

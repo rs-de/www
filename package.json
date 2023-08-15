@@ -8,7 +8,7 @@
     "start": "echo \"http://$(ipconfig getifaddr en0):3000/\" && next start",
     "prepare": "husky install",
     "lint": "next lint",
-    "translateBlogposts": "ts-node src/i18n/translate-documents.mts"
+    "translate": "ts-node src/i18n/translate-documents.mts"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.16",
@@ -28,9 +28,11 @@
     "lint-staged": "^13.2.2",
     "next": "^13.4.6",
     "next-intl": "^2.15.1",
+    "next-pwa": "^5.6.0",
     "next-themes": "^0.2.1",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
+    "qrcode.react": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",

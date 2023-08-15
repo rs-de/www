@@ -1,63 +1,125 @@
 import Typography from "@/components/Typography";
 import { getMessages } from "@/i18n/getMessages";
 import { NextPageContext } from "next";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+import { loadMarkdown } from "../../lib/loadMarkdown";
+import Markdown from "react-markdown";
+import { ComponentProps } from "react";
+import { A } from "@/components/A";
+import { QRCodeCanvas } from "qrcode.react";
 
-export default function Projects() {
+export default function Projects({ markdowns }: { markdowns: string[] }) {
   const t = useTranslations();
   return (
     <Typography className="my-2 px-2">
-      <h1>{t("projects")}</h1>
-      <div className="bg-[url('/blog/padlock.png')] bg-no-repeat border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
-        <div className="h-full bg-gradient-to-br from-transparent  to-primary-2 to-40% overflow-hidden">
-          <div className="w-full h-full text-left float-left p-2 sm:p-4">
+      <h1>{t("projects_headline")}</h1>
+      <div className="flex flex-col items-center gap-8">
+        <a href="#2023-3" id="2023-3">
+          #
+        </a>
+        <div className="w-full bg-[url('/img/projects/shopping-list-visual.webp')] bg-no-repeat border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
+          <Box className="bg-gradient-to-br from-transparent to-primary-2  to-[50%] sm:to-[35%]">
+            <div className="w-[245px] h-[310px] float-left" />
+            <h2 className="!mt-2">Shopping-list App (2023)</h2>
+            <MarkdownIntl>{markdowns[3]}</MarkdownIntl>
+            <QRCodeCanvas
+              className="m-auto"
+              value="https://shopping-list-eta.vercel.app"
+            />
+          </Box>
+        </div>
+        <a href="#2023-2" id="2023-2">
+          #
+        </a>
+        <div className="bg-[url('/img/projects/rushsoft-de-visual.png')] bg-no-repeat bg-right-top border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
+          <BoxImageRight>
+            <div className="h-[80px] sm:w-[300px] sm:h-[340px] sm:float-right" />
+            <h2 className="!mt-2">{t("development_of_this_site")}</h2>
+            <MarkdownIntl>{markdowns[2]}</MarkdownIntl>
+          </BoxImageRight>
+        </div>
+        <a href="#2023-1" id="2023-1">
+          #
+        </a>
+        <div className="bg-[url('/img/projects/padlock.png')] bg-no-repeat border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
+          <Box className="bg-gradient-to-br from-transparent  to-primary-2 to-40%">
             <div className="w-[175px] h-[210px] float-left" />
             <h2 className="!mt-2">B2B platform 2022/23 (not public)</h2>
-            <h3>Relaunch of B2B shop in TypeScript and React</h3>
-            <ul>
-              <li>
-                <b>Main features:</b> Product search/filter, Product details,
-                order import, multi carts, checkout, CMS integration,
-                Progressive Web App
-              </li>
-              <li className="">
-                <b>Usage:</b> ~100 orders per day, peak ~1000
-              </li>
-              <li>
-                <b>Stack:</b> TypeScript, React, ReactRouter, ReduxToolkit,
-                RTKQuery, MUI, Cypress, github with actions, docker, portainer
-              </li>
-              <li>
-                <b>Backend: </b> RESTFul APIs (extra team)
-              </li>
-              <li>
-                <b>Internationalization:</b> 7 languages integrated with i18next
-              </li>
-              <li>
-                <b>Team size: </b> 3 (1 lead dev, 1 dev, 1 owner/QA)
-              </li>
-              <li>
-                <b>My role: </b> lead dev
-              </li>
-            </ul>
-            I did the setup of the project from scratch including CI/CD with
-            gitlab (later github) and docker. This was my first project i used
-            &nbsp;
-            <Link href="https://redux-toolkit.js.org/rtk-query/overview">
-              RTK Query
-            </Link>
-            . The overall experience with it was very good. If a project is
-            working with redux, I would use RTKQuery again!
-          </div>
+            <MarkdownIntl>{markdowns[0]}</MarkdownIntl>
+          </Box>
+        </div>
+        <a href="#2021" id="2021">
+          #
+        </a>
+        <div className="border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
+          <Box>
+            <h2 className="!mt-2">Security driven System update (2021)</h2>
+            <MarkdownIntl>{markdowns[1]}</MarkdownIntl>
+          </Box>
         </div>
       </div>
     </Typography>
   );
 }
 
+function MarkdownIntl({ children, ...props }: ComponentProps<typeof Markdown>) {
+  const locale = useLocale();
+  return (
+    <Markdown
+      components={{
+        a: (props) => (
+          <A href={props.href?.replace(/^\//, `/${locale}/`)}>
+            {props.children}
+          </A>
+        ),
+      }}
+    >
+      {children}
+    </Markdown>
+  );
+}
+
+function BoxImageRight({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="h-full bg-gradient-to-b from-transparent to-primary-2 to-20% -to-b sm:bg-gradient-to-bl sm:from-transparent  sm:to-primary-2 sm:to-40% overflow-hidden">
+      <div className="w-full h-full text-left float-right p-2 sm:p-4">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function Box({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div className={`h-full overflow-hidden ${className}`}>
+      <div className="w-full h-full text-left float-left p-2 sm:p-4">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+const dir = "projects";
 export const getStaticProps = async (context: NextPageContext) => ({
   props: {
     messages: await getMessages(context),
+    markdowns: [
+      await loadMarkdown(context, { name: "2022-shop-relaunch", dir }),
+      await loadMarkdown(context, {
+        name: "2021-containerize-and-update",
+        dir,
+      }),
+      await loadMarkdown(context, {
+        name: "2023-rushsoft-de",
+        dir,
+      }),
+      await loadMarkdown(context, { name: "2023-shopping-list-pwa", dir }),
+    ],
   },
 });

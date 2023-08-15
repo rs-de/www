@@ -33,9 +33,9 @@ The heart of the MVP is the translation of the markdown files, so lets start and
 ```
 
 It is empty, since I want to use GCC: Let AI do the initial work. So I just right clicked into the file in order to see how to start GCC (nowbody can remember all the commands, right?) and I got this:
-![context menu to start GCC](/blog/ai-example-01.png)
+![context menu to start GCC](/img/blog/ai-example-01.png)
 I clicked **Start Code Chat** and got a chat dialog, where I could tell GCC what I want it to do:
-![GCC chat dialog](/blog/ai-example-02.png)
+![GCC chat dialog](/img/blog/ai-example-02.png)
 It took about 5 seconds and GCC came up with this:
 
 ```
@@ -190,4 +190,4 @@ _But:_ The developer has to know what he is doing. I believe it does not make se
 to tell junior developers not to use it – since they will ;-) – But they should
 carefully read the generated code and ask themselves "Do I understand the code?" and learn, if not.
 
-And last but not least, here the [translated version (german)](/de/blog/artificial-intelligence-developer-support/)
+And last but not least, here the [translated version (german)](/blog/artificial-intelligence-developer-support/)
