@@ -190,4 +190,4 @@ _But:_ The developer has to know what he is doing. I believe it does not make se
 to tell junior developers not to use it – since they will ;-) – But they should
 carefully read the generated code and ask themselves "Do I understand the code?" and learn, if not.
 
-And last but not least, here the [translated version (german)](/blog/artificial-intelligence-developer-support/)
+And last but not least, here the [translated version (german)](/de/blog/artificial-intelligence-developer-support)
