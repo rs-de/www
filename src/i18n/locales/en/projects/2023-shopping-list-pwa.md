@@ -1,6 +1,6 @@
 ### A progressive web app (PWA) build with Next.js
 
-Since I was motivated to test some stuff I did not work with sof ar, I decided
+Since I was motivated to test some stuff I did not work with sofar, I decided
 to build a shopping list progressive web app. The cool thing is, that there
 are zero hosting-costs either for hosting of the app nor for the database.
 I decided to use following stack:

@@ -13,7 +13,7 @@ Ich definierte folgende technischen Anforderungen:
 
 - Internationalisierung mit SSG mit Next.js App-Router war nicht fertig: Umstellung auf "pages-router" erforderlich.
 - Das Styling mit radix-ui/colors funktioniert gut: Keine extra "dark:" vorangestellten Regeln nötig (Spezialfälle ausgenommen)
-- Hosting auf fly.io toll, keine Probleme, sehr gute Dokumentation, einfach zu bedienen, keine Kosten für kleine Projekte (Juli 2013).
+- Hosting auf fly.io toll, keine Probleme, sehr gute Dokumentation, einfach zu bedienen, keine Kosten für kleine Projekte (Juli 2023).
 - Sehr gute Seiten Qualität nach lighthouse, siehe [blog](/img/blog/web-app-quality-assurance)
 
 Das Project is öffentlich auf github (siehe Link, oben rechts in der Navi)
