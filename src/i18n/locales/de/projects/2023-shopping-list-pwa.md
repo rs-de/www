@@ -17,5 +17,5 @@ Ich habe mich für den folgenden Stack interessiert:
 - Das Hosting bei Vercel hat sehr gut funktioniert, gute Dokumentation und einfach zu bedienen. Für den Start von Projekten eine sehr gute Wahl. Das einzige was ich kritisch sehe: Container-basierte Bereitstellungen wird nicht unterstützt. So ist immer ein Build für das Deployment auf das Produktionssystem erforderlich, was Zeit kostet. Neben anderen wichtigen Eigenschaften sind container basierte Deployments deutlich schneller.
 
 Der Quelltext ist auf github (Link im footer der App).
-Hier der Link zur [shopping-list-app](https://shopping-list-eta.vercel.app/)
-Oder benutzen Sie diesen QR-Code, wenn Sie die App auf Ihrem mobilen Gerät testen wollen:
+Hier der Link zur App: [shopping-list-app](https://shopping-list-eta.vercel.app/)  
+Oder scannen Sie diesen QR-Code, wenn Sie die App auf Ihrem mobilen Gerät testen wollen:
