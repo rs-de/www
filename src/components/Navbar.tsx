@@ -85,6 +85,7 @@ export default function Navbar() {
         onClick={(e) => {
           setMenuOpen(true);
         }}
+        aria-label="Open menu"
       >
         <Bars3Icon className="w-6 h-6" />
       </Button>
