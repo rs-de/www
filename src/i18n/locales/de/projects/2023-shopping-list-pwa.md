@@ -1,9 +1,8 @@
 ### Eine progressive Webanwendung (PWA), erstellt mit Next.js
 
 Da ich motiviert war, einige Technologien zu testen, habe ich beschlossen
-eine progressive Webapplikation für eine Einkaufsliste zu bauen. Das tolle daran ist, dass
-keine Kosten anfallen, weder für das Hosting der App noch für die Datenbank.
-Ich habe mich für den folgenden Stack entschieden:
+eine progressive Webapplikation für eine Einkaufsliste zu bauen. Das tolle daran ist, dass zunächst keine Kosten anfallen, weder für das Hosting der App noch für die Datenbank.
+Ich habe mich für den folgenden Stack interessiert:
 
 - Neueste Version von [Next.js](https://nextjs.org/) mit App-Router und SSR (Server Side Rendering)
 - Internationalisierung mit next-intl
