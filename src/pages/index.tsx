@@ -35,12 +35,15 @@ export default function Home() {
           </div>
           <p className="text-justify">{t.rich("welcome_description")}</p>
           <p className="text-justify">{t.rich("welcome_introduction")}</p>
-          <A href="mailto:contact@rushsoft.de">
-            <span className="font-bold text-white dark:text-primary-11">
-              {t("contact")}
-            </span>
-          </A>
-          &nbsp;me.
+          {t.rich("contact_me", {
+            a: (chunk) => (
+              <A href="mailto:contact@rushsoft.de">
+                <span className="font-bold text-white dark:text-primary-11">
+                  {chunk}
+                </span>
+              </A>
+            ),
+          })}
         </Typography>
       </div>
       <Typography className="p-3">

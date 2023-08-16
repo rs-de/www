@@ -1,11 +1,15 @@
 {
+  "imprint": "Imprint",
+  "privacy": "Privacy",
+  "beware_auto_translation": "Beware: This page is automatically translated by Google Translate",
+  "projects": "Projects",
+  "projects_headline": "Projects",
+  "development_of_this_site": "Creation of this site (2023)",
   "pageTitle": "'<JP'> WebAppDev",
   "pageDescription": "Jochen Probst, senior software engineer working as freelancer for Web Application Development with JavaScript/TypeScript, React, Node.js and express.",
   "pageImpressumDescription": "Legal information about this website",
-  "imprint": "Imprint",
-  "privacy": "Privacy",
   "contact": "Contact",
-  "main": "Hello World!",
+  "contact_me": "<a>Contact</a> me",
   "year": "{count, plural, =0 {Since this year} one {#{plus} year} other {#{plus} years}}",
   "since": "since {number}",
   "some_weeks": "Some weeks",
@@ -19,10 +23,5 @@
   "welcome_description": "If you are looking for an experienced JavaScript / React developer working remote or close to Stuttgart, Germany, I might be the right person for you. I am also available for consulting.",
   "welcome_introduction": "I'm an independent senior software engineer focusing on frontend development in <b>TypeScript and React</b>, however I also have a lot of experience with backend dev. in JavaScript (Node.js, Express) together with common standards like SQL, REST and HTTP. I have been an <b>advocate of agile software development</b> for a long time. In addition I'm a big fan of open source software and I contribute to <b>open source</b> projects.",
   "blog": "Blogposts",
-  "view_on_github": "View on GitHub",
-  "toggle_dark_mode": "Toggle dark mode",
-  "beware_auto_translation": "Beware: This page is automatically translated by Google Translate",
-  "projects": "Projects",
-  "projects_headline": "Projects",
-  "development_of_this_site": "Creation of this site (2023)"
+  "view_on_github": "View on GitHub"
 }
