@@ -19,8 +19,8 @@ export default function Projects({ markdowns }: { markdowns: string[] }) {
         </a>
         <div className="w-full bg-[url('/img/projects/shopping-list-visual.webp')] bg-no-repeat border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
           <Box className="bg-gradient-to-br from-transparent to-primary-2  to-[50%] sm:to-[35%]">
-            <div className="w-[245px] h-[310px] float-left" />
-            <h2 className="!mt-2">Shopping-list App (2023)</h2>
+            <div className="w-[255px] h-[315px] float-left" />
+            <h2 className="!mt-0">Shopping-list App (2023)</h2>
             <MarkdownIntl>{markdowns[3]}</MarkdownIntl>
             <QRCodeCanvas
               className="m-auto"

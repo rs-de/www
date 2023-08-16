@@ -17,5 +17,5 @@ I decided to use following stack:
 - Mongoose is not the best choice if TypeScript is used. Better seams to be [Prisma](https://www.prisma.io)
 - Hosting at Vercel did work very well, good documentation and easy to use. To start projects a very good choice. The only thing I'm more critical is that container based deployments are not supported, so a build for production deployments is required which takes time. Container based deployments are much faster(there are other importend advantages, but not developer experience related).
 
-Here the link to the [shopping-list-app](https://shopping-list-eta.vercel.app/)
-Or use this QR-Code, if you want to test it on your mobile device:
+Here the link to the app: [shopping-list-app](https://shopping-list-eta.vercel.app/).  
+Or scann this QR-Code, if you want to test it on your mobile device:
