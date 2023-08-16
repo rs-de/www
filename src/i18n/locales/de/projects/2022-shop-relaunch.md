@@ -9,7 +9,6 @@
 - **Meine Rolle:** Lead Dev
 
 Neben UI-Implementierung, Codereviews und der Verwaltung des Entwicklungsprozesses,
-habe ich das Projekt von Grund auf inklusive CI/CD mit Gitlab eingerichtet
-(später Github) und Docker. In diesem Projekt setzte ich das erste mal
-[RTK Query](https://redux-toolkit.js.org/rtk-query/overview) ein.
-Die allgemeine Erfahrung damit war sehr gut. Wenn in einem Projekt Redux verwendet wird, und viele API Endpunkte integriert werden müssen, würde ich RTKQuery wieder verwenden!
+habe ich das Projekt von Grund auf inklusive CI/CD mit Gitlab (später Github) und Docker eingerichtet.
+In diesem Projekt setzte ich das erste mal [RTK Query](https://redux-toolkit.js.org/rtk-query/overview) ein.
+Die allgemeine Erfahrung damit war sehr gut. Wenn in einem Projekt Redux verwendet wird und viele API Endpunkte integriert werden müssen, würde ich RTKQuery wieder verwenden!

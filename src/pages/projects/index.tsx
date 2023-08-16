@@ -33,7 +33,7 @@ export default function Projects({ markdowns }: { markdowns: string[] }) {
         </a>
         <div className="bg-[url('/img/projects/rushsoft-de-visual.png')] bg-no-repeat bg-right-top border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
           <BoxImageRight>
-            <div className="h-[80px] sm:w-[300px] sm:h-[340px] sm:float-right" />
+            <div className="h-[80px] sm:w-[290px] sm:h-[340px] sm:float-right" />
             <h2 className="!mt-2">{t("development_of_this_site")}</h2>
             <MarkdownIntl>{markdowns[2]}</MarkdownIntl>
           </BoxImageRight>
@@ -81,7 +81,7 @@ function MarkdownIntl({ children, ...props }: ComponentProps<typeof Markdown>) {
 
 function BoxImageRight({ children }: { children: React.ReactNode }) {
   return (
-    <div className="h-full bg-gradient-to-b from-transparent to-primary-2 to-20% -to-b sm:bg-gradient-to-bl sm:from-transparent  sm:to-primary-2 sm:to-40% overflow-hidden">
+    <div className="h-full bg-gradient-to-b from-transparent to-primary-2 to-20% -to-b sm:bg-gradient-to-bl sm:from-transparent sm:to-primary-2 sm:to-35% overflow-hidden">
       <div className="w-full h-full text-left float-right p-2 sm:p-4">
         {children}
       </div>

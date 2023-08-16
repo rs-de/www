@@ -48,7 +48,6 @@ export default function Home() {
       </div>
       <Typography className="p-3">
         <h1>{t("experiences")}</h1>
-        <p>{t.rich("experiences_description")}</p>
         <h2>{t("programming_languages")}</h2>
         <p>
           {experiencesProgrammingLanguages.map(
@@ -89,9 +88,21 @@ export default function Home() {
       <Typography className="p-3">
         <h1>{t("companies_i_worked_for")}</h1>
         {companiesIWorkedFor.map(
-          ({ name, href, [`href_${locale}`]: href_lang }) => (
+          ({
+            name,
+            href,
+            [`href_${locale}`]: href_lang,
+            role,
+            [`role_${locale}`]: role_lang,
+            duration,
+          }) => (
             <div key={name} className="p-1">
-              <A href={href_lang ?? href}>{name}</A>
+              <A href={String(href_lang ?? href)}>{name}</A>
+              <br />
+              <span className="text-slate-11">
+                {role_lang ?? role}&nbsp;(
+                {t("year", { count: duration, plus: "" })})
+              </span>
             </div>
           )
         )}
@@ -128,21 +139,38 @@ const experiencesFrontendFrameworks = [
   { from: 2009, to: 2014, technology: "Zend Framework" },
 ];
 
-const companiesIWorkedFor: Array<Record<string, string>> = [
+const companiesIWorkedFor: Array<Record<string, string | number>> = [
   {
     name: "diconium GmbH",
     href: "https://diconium.com/",
+    role: "Consultant IT, Senior Software Engineer, Team Lead Frontend",
+    duration: 19,
   },
-  { name: "Kodak alaris", href: "https://www.alarisworld.com" },
-  { name: "PBS Network", href: "https://www.pbsnetwork.eu" },
+  {
+    name: "Kodak alaris",
+    href: "https://www.alarisworld.com",
+    role_en: "Contact person consulting frontend development",
+    duration: 11,
+  },
+  {
+    name: "PBS Network",
+    href: "https://www.pbsnetwork.eu",
+    role: "Senior Software Engineer Frontend",
+    duration: 2,
+  },
   {
     name: "DaimlerChrysler AG",
     href: "https://de.wikipedia.org/wiki/Mercedes-Benz_Group",
     href_en: "https://en.wikipedia.org/wiki/Mercedes-Benz_Group",
+    role: "Diplomarbeit",
+    role_en: "Theses",
+    duration: -1, //=> 6 months
   },
   {
     name: "Neckarwerke Stuttgart",
     href: "https://de.wikipedia.org/wiki/Neckarwerke_Stuttgart",
+    role: "Web Developer Intranet",
+    duration: 1,
   },
 ];
 
@@ -273,7 +301,7 @@ function Experience({ from, to, technology }: ExperienceProps) {
   const t = useTranslations();
   return (
     <>
-      <span className={`${to && "text-gray-400"}`}>
+      <span>
         {to && to == from ? (
           <>
             {t("some_weeks")}&nbsp;{technology}&nbsp;({from})

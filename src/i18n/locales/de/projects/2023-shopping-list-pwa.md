@@ -14,7 +14,7 @@ Ich habe mich für den folgenden Stack interessiert:
 #### Ergebnis (Developer Experience)
 
 - Mongoose ist nicht die beste Wahl, wenn TypeScript verwendet wird. Besser scheint [Prisma](https://www.prisma.io).
-- Das Hosting bei Vercel hat sehr gut funktioniert, gute Dokumentation und einfach zu bedienen. Für den Start von Projekten eine sehr gute Wahl. Das einzige was ich kritisch sehe: Container-basierte Bereitstellungen wird nicht unterstützt. So ist immer ein Build für das Deployment auf das Produktionssystem erforderlich, was Zeit kostet. Neben anderen wichtigen Eigenschaften sind container basierte Deployments deutlich schneller.
+- Das Hosting bei Vercel hat sehr gut funktioniert, gute Dokumentation und einfach zu bedienen. Für den Start von Projekten eine sehr gute Wahl. Das einzige was ich kritisch sehe: Container-basierte Bereitstellungen werden nicht unterstützt. So ist immer ein Build für das Deployment auf das Produktionssystem erforderlich, was Zeit kostet. Neben anderen wichtigen Eigenschaften sind container basierte Deployments deutlich schneller.
 
 Der Quelltext ist auf github (Link im footer der App).
 Hier der Link zur App: [shopping-list-app](https://shopping-list-eta.vercel.app/)  
