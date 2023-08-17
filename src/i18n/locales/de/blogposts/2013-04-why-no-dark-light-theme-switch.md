@@ -16,11 +16,11 @@ body {
 }
 
 /* ↑↑↑ Farbeinstellungen oben: "default" (oder "light mode") ↑↑↑↑ */
-@media (bevorzugt-Farbschema: dunkel) {
+@media (bevorzugt-farbschema: dunkel) {
   /* ↓↓↓ Überschreiben der Standard-Farbeinstellungen für den "dunklen Modus" ↓↓↓ */
   body {
     background-color: schwarz;
-    Farbe: weiß;
+    farbe: weiß;
   }
 }
 ```
@@ -46,7 +46,7 @@ Ich habe über den Grund nachgedacht, warum ich die Schaltfläche hinzugefügt h
 
 Im Fall 1) können wir die Entwicklungswerkzeuge des Browsers verwenden, um den dunklen Modus zu aktivieren (oder zwischen dunkel und hell zu wechseln). Ich brauche also keinen Button dafür in der App. Hier die Devtools von Chrome:
 
-![dev tools theme toggle](/img/blog/devtools-darkmode.png)
+![dev tools theme toggle](/img/blog/devtools-darkmode.webp)
 
 Im Fall 2) müssen wir nur den Fehler beheben, wie üblich.
 

@@ -2,14 +2,8 @@ import { blogposts } from "@/i18n/locales/en/blogposts";
 import Head from "@/components/Head";
 import Typography from "@/components/Typography";
 import { getMessages } from "@/i18n/getMessages";
-import {
-  GetStaticPaths,
-  GetStaticProps,
-  GetStaticPropsContext,
-  InferGetStaticPropsType,
-} from "next";
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import ReactMarkdown from "react-markdown";
-import fs from "fs/promises";
 import NextHead from "next/head";
 import { useRouter } from "next/router";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";

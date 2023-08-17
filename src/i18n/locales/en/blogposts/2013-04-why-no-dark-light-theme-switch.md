@@ -46,7 +46,7 @@ I thought about the reason I added the button, and two came in my mind:
 
 In case 1) We can use the browser dev tools to enable dark mode (or switch between dark and light). So I do not need a button for that within the app. Here devtools of chrome:
 
-![dev tools theme toggle](/img/blog/devtools-darkmode.png)
+![dev tools theme toggle](/img/blog/devtools-darkmode.webp)
 
 In case 2) we have just to fix the bug, as usual.
 
