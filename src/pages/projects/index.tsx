@@ -43,7 +43,7 @@ export default function Projects({ markdowns }: { markdowns: string[] }) {
         </a>
         <div className="bg-[url('/img/projects/padlock.png')] bg-no-repeat border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
           <Box className="bg-gradient-to-br from-transparent  to-primary-2 to-40%">
-            <div className="w-[175px] h-[210px] float-left" />
+            <div className="w-[175px] h-[230px] float-left" />
             <h2 className="!mt-2">B2B platform 2022/23 (not public)</h2>
             <MarkdownIntl>{markdowns[0]}</MarkdownIntl>
           </Box>
