@@ -149,6 +149,7 @@ const companiesIWorkedFor: Array<Record<string, string | number>> = [
   {
     name: "Kodak alaris",
     href: "https://www.alarisworld.com",
+    role: "Ansprechpartner/Beratung Frontend Entwicklung",
     role_en: "Contact person consulting frontend development",
     duration: 11,
   },
@@ -159,18 +160,18 @@ const companiesIWorkedFor: Array<Record<string, string | number>> = [
     duration: 2,
   },
   {
+    name: "Neckarwerke Stuttgart",
+    href: "https://de.wikipedia.org/wiki/Neckarwerke_Stuttgart",
+    role: "Web Developer Intranet",
+    duration: 1,
+  },
+  {
     name: "DaimlerChrysler AG",
     href: "https://de.wikipedia.org/wiki/Mercedes-Benz_Group",
     href_en: "https://en.wikipedia.org/wiki/Mercedes-Benz_Group",
     role: "Diplomarbeit",
     role_en: "Theses",
     duration: -1, //=> 6 months
-  },
-  {
-    name: "Neckarwerke Stuttgart",
-    href: "https://de.wikipedia.org/wiki/Neckarwerke_Stuttgart",
-    role: "Web Developer Intranet",
-    duration: 1,
   },
 ];
 
