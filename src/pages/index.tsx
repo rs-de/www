@@ -24,7 +24,7 @@ export default function Home() {
               <picture>
                 <img
                   className={"rounded-full"}
-                  src={"/jp.jpeg"}
+                  src={"/jp.webp"}
                   alt={"Jochen Probst"}
                   width={80}
                   height={80}

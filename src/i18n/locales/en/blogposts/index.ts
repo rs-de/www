@@ -1,5 +1,12 @@
 export const blogposts = [
   {
+    id: "2013-04-why-no-dark-light-theme-switch",
+    created: "2023-08-17",
+    title: "Darkmode and it's toggle button",
+    description:
+      "Why I decided to remove the dark/light theme switch from my web apps",
+  },
+  {
     id: "artificial-intelligence-developer-support",
     created: "2023-07-19",
     title: "Artificial intelligence developer support",

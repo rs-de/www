@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 const API_KEY = process.env.API_KEY_DEEPL ?? "";
 
-const DIR = "projects";
+const DIR = "blogposts";
 const SOURCE_PATH = `src/i18n/locales/en/${DIR}`;
 const TARGET_PATH = "src/i18n/locales";
 const targetLanguage = "de";

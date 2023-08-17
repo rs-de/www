@@ -35,6 +35,7 @@ export default function BlogPost({
         <meta name="description" content={description} />
       </NextHead>
       <Typography className="text-left font-serif px-2 bg-primary-1">
+        <h1>Blogpost</h1>
         {locale != "en" && (
           <div className="border-2 rounded border-yellow-6 bg-yellow-3 p-3 mb-3">
             {t.rich("beware_auto_translation", {
