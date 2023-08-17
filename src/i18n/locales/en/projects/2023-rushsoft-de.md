@@ -17,4 +17,4 @@ I defined this requirements:
 - Hosting on fly.io works well, no issues, good documentation, easy to use, no costs for small projects (July, 2023).
 - Nice lighthouse results, see [blog](/blog/web-app-quality-assurance)
 
-This project is public on github (link in above in navbar)
+This project is public on github (link above in navbar)
