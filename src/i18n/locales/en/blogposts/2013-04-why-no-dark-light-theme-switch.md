@@ -43,7 +43,7 @@ Unfortunately there is a issue if the user loads the page the first time (or on 
 
 ### So why do we add a toggle button?
 
-When I thought about it two came in my mind:
+When I thought about it two reasons came in my mind:
 
 1. As _developer_ I want to test the dark mode on my website and be able to switch
 2. There might be bugs where Darkmode fails, something is not "visible" on the page and user struggles: But the User might be happy to have a switch? Maybe not: It is very likely that the user does not know about this "workaround" or does not find the toggle
