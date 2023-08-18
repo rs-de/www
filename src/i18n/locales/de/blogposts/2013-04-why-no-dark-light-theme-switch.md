@@ -1,10 +1,9 @@
 ## Warum ich beschlossen habe, den Schalter "Dark -/Light Theme" aus meinen Webanwendungen zu entfernen
 
-Ich mag es sehr, wenn eine Website oder Webanwendung ein dunkles Theme unterstützt. Und ich denke
-dass es wichtig ist, es zu unterstützen. Ob es wichtig ist oder nicht, ist eine andere Diskussion.
-um uns zu konzentrieren, nehmen wir an, dass wir es unterstützen wollen.
+Ich mag es sehr, wenn eine Webanwendung den Vorlieben der Benutzer folgt.
+Also lassen Sie uns die Unterstützung für helle und dunkle Themen in einer Webanwendung implementieren.
 
-### Wie funktioniert der Dark-Mode in einer Webapplikation?
+### Wie funktioniert der dunkle Modus?
 
 Da das Styling einer Webanwendung mit CSS erfolgt, hier ein einfaches Beispiel:
 
@@ -12,16 +11,20 @@ Da das Styling einer Webanwendung mit CSS erfolgt, hier ein einfaches Beispiel:
 /* beispiel css */
 body {
   background-color: weiß;
-  color: black; /* text color */
+  color: black; /* Textfarbe */
+  [...]
 }
+[...]
 
-/* ↑↑↑ Farbeinstellungen oben: "default" (oder "light mode") ↑↑↑↑ */
-@media (bevorzugt-farbschema: dunkel) {
+/* ↑↑↑ Farbeinstellungen oben: "default" (oder "light mode") ↑↑↑ */
+@media (bevorzugt-Farbschema: dunkel) {
   /* ↓↓↓ Überschreiben der Standard-Farbeinstellungen für den "dunklen Modus" ↓↓↓ */
   body {
     background-color: schwarz;
-    farbe: weiß;
+    color: white;
+    [...]
   }
+  [...]
 }
 ```
 
@@ -32,27 +35,28 @@ Das war's, der dunkle Modus ist fertig. (Wie üblich gibt es Sonderfälle zu bea
 
 ### Die Implementierung eines Umschalters macht alles kompliziert
 
-Da wir diese Toggles überall finden können, scheint es üblich zu sein, also fügen wir einen hinzu.
-Auf den ersten Blick scheint es einfach zu sein, zum Beispiel könnte eine Single Page Application (SPA) einfach einen lokalen booleschen Status verwenden, um den Toggle zu implementieren.
-Aber was ist, wenn der Benutzer die Seite neu lädt? Der Zustand ist weg. Ok, kein Problem ... fügen wir ein lokales Speicherflag hinzu. fertig ... oder nicht?
-Leider gibt es ein Problem, wenn der Benutzer die Seite das erste Mal lädt (oder beim Neuladen der Seite): es gibt ein kurzes Flackern (von weißem zu schwarzem Hintergrund)! Die Seite wird mit dem Standard-Theme geladen, und nach dem Laden der Seite wird das Theme per Javascript auf der Grundlage des lokalen Speichers auf die vom Benutzer bevorzugten Einstellungen umgestellt. Das ist kein gutes Benutzererlebnis. Auch wenn dieses Problem gelöst ist, gibt es noch einen Sonderfall: Wenn eine Seite auf dem Server gerendert wird, weiß der Server nicht über die Einstellung beim Neuladen bei der allerersten Anfrage Bescheid, aber, kein Problem ... wir können ein Cookie verwenden! ... hm, Gott sei Dank gibt es ein paar Pakete, mit denen das leicht zu integrieren ist :-). Ah, ich vergaß ... wir müssen die Cookie-Einstellungen in unseren Datenschutzrichtlinien anpassen, das wissen wir ... dieser herrliche Dialog erscheint überall und zwingt uns zu sagen "Ja, es ist ok, das Cookie zu verwenden".
+Da wir heutzutage in vielen Webanwendungen solche Themenumschalter finden, fügen wir auch einen hinzu.
 
-### Warum fügen wir also ein Kippschalter hinzu?
+Es scheint einfach zu sein: In einer Single Page Application (SPA) zum Beispiel könnten wir einfach local-state verwenden, um das Toggle zu implementieren.
+Was aber, wenn der Benutzer die Seite neu lädt? Der Zustand ist weg. Ok, kein Problem ... fügen wir ein Flag zu localStorage hinzu, fertig ... oder nicht?
+Leider gibt es ein Problem, wenn der Benutzer die Seite das erste Mal lädt (oder beim Neuladen der Seite): es gibt ein kurzes "Flackern" (von weißem zu schwarzem Hintergrund). Die Seite wird mit dem Standard-Theme geladen, und nach dem Laden der Seite wird das Theme per Javascript auf der Grundlage von localStorage auf das vom Benutzer bevorzugte Theme umgestellt. Das ist kein gutes Benutzererlebnis. Aber auch wenn dieses Problem gelöst wurde, gibt es immer noch Randfälle: Wenn eine Seite serverseitig gerendert wird, weiß der Server nichts von einer Einstellung, aber wir wollen die Seite im richtigen Layout rendern, kein Problem ... wir können ein Cookie verwenden! ... hm, Gott sei Dank gibt es einige Pakete auf npm, um die Integration zu erleichtern :-). Ah, ich vergaß ... wir müssen die Cookie-Einstellungen in unseren Datenschutzrichtlinien anpassen, wir alle kennen diesen herrlichen Dialog, der uns zwingt, "Ja, die Verwendung des Cookies ist okay" zu sagen.
 
-Ich habe über den Grund nachgedacht, warum ich die Schaltfläche hinzugefügt habe, und mir sind zwei Dinge eingefallen:
+### Warum fügen wir also eine Schaltfläche zum Umschalten hinzu?
+
+Als ich darüber nachgedacht habe, sind mir zwei Dinge eingefallen:
 
 1. Als _Entwickler_ möchte ich den dunklen Modus auf meiner Website testen und in der Lage sein, umzuschalten
 2. Es könnte Bugs geben, bei denen der Darkmode versagt, etwas auf der Seite nicht "sichtbar" ist und der Benutzer sich abmüht: Aber der Benutzer könnte froh sein, einen Schalter zu haben? Vielleicht auch nicht: Es ist sehr wahrscheinlich, dass der Nutzer diesen "Workaround" nicht kennt oder die Umschaltmöglichkeit nicht findet.
 
-Im Fall 1) können wir die Entwicklungswerkzeuge des Browsers verwenden, um den dunklen Modus zu aktivieren (oder zwischen dunkel und hell zu wechseln). Ich brauche also keinen Button dafür in der App. Hier die Devtools von Chrome:
+In Fall 1) Wir können die Entwicklerwerkzeuge des Browsers verwenden, um den dunklen Modus zu aktivieren (oder zwischen dunkel und hell umzuschalten). Wenn wir das verwenden, brauchen wir keine Schaltfläche in der App. Hier devtools von Chrome:
 
 ![dev tools theme toggle](/img/blog/devtools-darkmode.webp)
 
 Im Fall 2) müssen wir nur den Fehler beheben, wie üblich.
 
-#### Aber es gibt noch etwas anderes, warum wir denken, dass wir einen "Fallback" brauchen
+#### Aber es gibt noch etwas anderes, warum wir einen Toggle-Button für gut halten könnten
 
-In der Entwicklung könnte es nicht so einfach sein, den Darkmode "überall" zu unterstützen. Zum Beispiel müssen wir in Tailwind manuell einen "dark:"-Modifikator zu jeder Klasse hinzufügen, die wir überschreiben müssen, um den Darkmode zu unterstützen. Wir müssen also aufpassen, dass wir das nicht vergessen. Aber wir werden einen vergessen (weil wir es können).
+Es kann fehleranfällig sein, den Darkmode zu unterstützen. Zum Beispiel müssen wir in tailwindcss einen "dark:"-Modifikator zu jeder Klasse hinzufügen, die wir überschreiben müssen, um den Darkmode zu unterstützen. Wir müssen also aufpassen, dass wir ihn nicht vergessen. Aber wir werden einen vergessen (weil wir es können). Er sieht so aus:
 
 ```
 // Rückenwind-Beispiel für ein div zum Gestalten
