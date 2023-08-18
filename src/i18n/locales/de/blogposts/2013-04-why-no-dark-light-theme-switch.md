@@ -43,12 +43,12 @@ Leider gibt es ein Problem, wenn der Benutzer die Seite das erste Mal lädt (ode
 
 ### Warum fügen wir also eine Schaltfläche zum Umschalten hinzu?
 
-Als ich darüber nachgedacht habe, sind mir zwei Dinge eingefallen:
+Als ich darüber nachdachte, kamen mir zwei Gründe in den Sinn:
 
 1. Als _Entwickler_ möchte ich den dunklen Modus auf meiner Website testen und in der Lage sein, umzuschalten
-2. Es könnte Bugs geben, bei denen der Darkmode versagt, etwas auf der Seite nicht "sichtbar" ist und der Benutzer sich abmüht: Aber der Benutzer könnte froh sein, einen Schalter zu haben? Vielleicht auch nicht: Es ist sehr wahrscheinlich, dass der Nutzer diesen "Workaround" nicht kennt oder die Umschaltmöglichkeit nicht findet.
+2. Es könnte Bugs geben, bei denen der dunkle Modus nicht funktioniert, etwas auf der Seite nicht "sichtbar" ist und der Benutzer Probleme hat. Aber der Benutzer kann zurück in den hellen Modus wechseln.
 
-In Fall 1) Wir können die Entwicklerwerkzeuge des Browsers verwenden, um den dunklen Modus zu aktivieren (oder zwischen dunkel und hell umzuschalten). Wenn wir das verwenden, brauchen wir keine Schaltfläche in der App. Hier devtools von Chrome:
+Im Fall 1) können wir die Entwicklerwerkzeuge des Browsers verwenden, um den dunklen Modus zu aktivieren (oder zwischen dunklem und hellem Modus zu wechseln). Wenn wir sie verwenden, brauchen wir keine Schaltfläche in der App. Hier devtools von Chrome:
 
 ![dev tools theme toggle](/img/blog/devtools-darkmode.webp)
 

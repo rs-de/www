@@ -46,7 +46,7 @@ Unfortunately there is a issue if the user loads the page the first time (or on 
 When I thought about it two reasons came in my mind:
 
 1. As _developer_ I want to test the dark mode on my website and be able to switch
-2. There might be bugs where Darkmode fails, something is not "visible" on the page and user struggles: But the User might be happy to have a switch? Maybe not: It is very likely that the user does not know about this "workaround" or does not find the toggle
+2. There might be bugs where dark mode fails, something is not "visible" on the page and user struggles. But the User can toggle back to light mode.
 
 In case 1) We can use browser's developer tools to enable dark mode (or switch between dark and light). If we use it, we do not need a button within the app. Here devtools of chrome:
 
