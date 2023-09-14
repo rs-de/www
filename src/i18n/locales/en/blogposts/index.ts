@@ -16,7 +16,7 @@ export const blogposts = [
     id: "web-app-quality-assurance",
     created: "2023-07-11",
     title: "Web application quality assurance",
-    description: "Quick and lightweight checking quality of a web application",
+    description: "Quick and lightweight quality checking of a web application",
   },
   {
     id: "javascript-the-web-language",
@@ -34,7 +34,7 @@ export const blogposts = [
   {
     id: "gut-feeling-estimates",
     created: "2018-10-05",
-    title: "Estimates using gut feeling",
+    title: "Gut feeling estimates",
     description:
       "Do not risk to waste time asking development for estimates. Ask for gut feeling estimates instead!",
   },
