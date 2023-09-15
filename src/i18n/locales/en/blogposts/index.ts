@@ -16,7 +16,7 @@ export const blogposts = [
     id: "web-app-quality-assurance",
     created: "2023-07-11",
     title: "Web application quality assurance",
-    description: "Quick and lightweight checking quality of a web application",
+    description: "Quick and lightweight quality checking of a web application",
   },
   {
     id: "javascript-the-web-language",

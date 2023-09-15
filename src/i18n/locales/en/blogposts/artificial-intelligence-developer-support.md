@@ -1,14 +1,14 @@
 ## Artificial Intelligence developer support: An example in 2023
 
-Using new stuff in side projects is a good way to learn. In this post I will document usage of [Github Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) (GCC) while implementing some feature to my site.
+Using new technologies in side projects is a good way to learn. In this post I will document usage of [Github Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) (GCC) while implementing some feature to my site.
 
 ### Context
 
-Within my personal website there are blog posts written in [markdown](https://en.wikipedia.org/wiki/Markdown) format. Since technical IT documents are heavily influenced by english language writing such documents in english feels easier. But in order to be polite to none native english speaking users why not deliver such content in other languages? So I decided to offer translated versions, too.
+Within my personal website are blog posts written in [markdown](https://en.wikipedia.org/wiki/Markdown) format. Since technical IT documents are heavily influenced by english language, writing said documents feels easier to do in english. But in order to improve the experience for non-native english speaking users, I decided to offer translated versions too.
 
 ### The MVP (minimum viable product)
 
-Some documents written in english and formatted in markdown should be auto translated to a given set of languages.
+Some documents written in english and formatted in markdown should be automatically translated to a given set of languages.
 
 ### Development concept to get the MVP
 
@@ -24,7 +24,7 @@ At the time of writing this post, GCC was in preview and only available for [VSC
 
 #### Translation with DeepL api
 
-The heart of the MVP is the translation of the markdown files, so lets start and create a script for it:
+The heart of the MVP is the translation of the markdown files, so let's start and create a script for it:
 
 ##### **translate-documents.ts**
 
@@ -32,9 +32,9 @@ The heart of the MVP is the translation of the markdown files, so lets start and
 
 ```
 
-It is empty, since I want to use GCC: Let AI do the initial work. So I just right clicked into the file in order to see how to start GCC (nowbody can remember all the commands, right?) and I got this:
+At first, it was empty and since I wanted to use GCC: Why not try to let AI do the initial work? So I just right-clicked into the file in order to see how to start GCC (nobody can remember all the commands, right?) and I got this:
 ![context menu to start GCC](/img/blog/ai-example-01.png)
-I clicked **Start Code Chat** and got a chat dialog, where I could tell GCC what I want it to do:
+I clicked **Start Code Chat** and got a chat dialog, where I could tell GCC what I wanted it to do:
 ![GCC chat dialog](/img/blog/ai-example-02.png)
 It took about 5 seconds and GCC came up with this:
 
@@ -80,13 +80,13 @@ async function translateMarkdownDocument(
 ```
 
 Wow! Not bad.  
-But this is a good example that the human user has to judge and adapt the result.
-First, I did not like the usage of axios as http client, which would require to install it.
+But this is a good example that the human user still has to judge and adapt the result.
+First, I did not like the usage of axios as a http client, which would require to install it.
 Since it is good to avoid extra packages I just told GCC to leverage node's build-in fetch api instead:
 
 > translate a markdown document given by path with DeepL api leverage fetch api
 
-After 2 sec. GCC came up with this:
+After 2 seconds GCC came up with this:
 
 ```
 import fs from "fs";
@@ -134,7 +134,7 @@ translateMarkdownDocument(documentPath, targetLanguage)
 
 Crazy, right? GCC even added an example usage of the function it created.
 
-The next thing to correct was the mixture of sync and async code, since a synchronous call
+The next thing to correct, was the mixture of sync and async code, since a synchronous call
 is blocking the event loop and should be avoided. So I told GCC to make the function async, and voila GCC did it.
 
 #### Does the translation function work?
@@ -184,10 +184,10 @@ async function translateMarkdownDocument(
 
 ### Conclusion
 
-_First:_ I will continue using GCC. It seems to save time, at least because getting
-examples and hints is so close to the code.  
+_First:_ I will continue to use GCC. It seems to save time, at least because getting
+examples and hints is embedded close to the code.  
 _But:_ The developer has to know what he is doing. I believe it does not make sense
 to tell junior developers not to use it – since they will ;-) – But they should
 carefully read the generated code and ask themselves "Do I understand the code?" and learn, if not.
 
-And last but not least, here the [translated version (german)](/de/blog/artificial-intelligence-developer-support)
+And last but not least, here is the [translated version (german)](/de/blog/artificial-intelligence-developer-support)
