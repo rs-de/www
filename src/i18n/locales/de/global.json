@@ -10,7 +10,7 @@
   "pageImpressumDescription": "Impressum",
   "contact": "Kontakt",
   "contact_me": "<a>Kontaktieren</a> Sie mich!",
-  "year": "{count, plural, =-1 {6 Monate} =0 {Since this year} one {#{plus} year} other {#{plus} years}}",
+  "year": "{count, plural, =-1 {6 Monate} =0 {Seit diesem Jahr} one {#{plus} Jahr} other {#{plus} Jahre}}",
   "since": "seit {number}",
   "some_weeks": "einige Wochen",
   "programming_languages": "Programmiersprachen",

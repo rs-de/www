@@ -130,6 +130,7 @@ const experiencesProgrammingLanguages = [
 
 const experiencesFrontendFrameworks = [
   { from: 2015, technology: "React" },
+  { from: 2023, technology: "Remix" },
   { from: 2023, technology: "Next.js" },
   { from: 2023, technology: "tailwindcss" },
   { from: 2016, technology: "Redux" },
@@ -145,13 +146,6 @@ const companiesIWorkedFor: Array<Record<string, string | number>> = [
     href: "https://diconium.com/",
     role: "Consultant IT, Senior Software Engineer, Team Lead Frontend",
     duration: 19,
-  },
-  {
-    name: "Kodak alaris",
-    href: "https://www.alarisworld.com",
-    role: "Ansprechpartner/Beratung Frontend Entwicklung",
-    role_en: "Contact person consulting frontend development",
-    duration: 11,
   },
   {
     name: "PBS Network",
@@ -264,6 +258,12 @@ const tools = [
     name: "knex.js",
     href: "https://knexjs.org/",
     mainUseCase: "RDMS Query Builder",
+    stillInUse: true,
+  },
+  {
+    name: "Mongoose",
+    href: "https://mongoosejs.com/",
+    mainUseCase: "ODM",
     stillInUse: true,
   },
   {
