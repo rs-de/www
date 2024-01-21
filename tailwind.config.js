@@ -1,9 +1,18 @@
+const radixColors = require("@radix-ui/colors");
 const { createPlugin } = require("windy-radix-palette");
-const colors = createPlugin({ opacitySupport: false });
 
 // https://www.radix-ui.com/colors/docs/palette-composition/composing-a-palette
 const primaryColor = "blue";
 const grayScaleColor = "slate";
+const colors = createPlugin({
+  opacitySupport: true,
+  colors: {
+    [primaryColor]: radixColors[primaryColor],
+    [primaryColor + "Dark"]: radixColors[primaryColor + "Dark"],
+    [grayScaleColor]: radixColors[grayScaleColor],
+    [grayScaleColor + "Dark"]: radixColors[grayScaleColor + "Dark"],
+  },
+});
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -15,7 +24,14 @@ module.exports = {
   plugins: [colors.plugin, require("@tailwindcss/typography")],
   theme: {
     extend: {
-      colors: { primary: colors.alias(primaryColor) },
+      colors: {
+        primary: Object.fromEntries(
+          Object.entries(colors.alias(primaryColor)).map(([key, val]) => [
+            key,
+            `rgb(${val} / <alpha-value>)`,
+          ]),
+        ),
+      },
       typography: (theme) => ({
         radixColors: {
           css: {
