@@ -36,7 +36,7 @@ export default function BlogPost({
               original: () => (
                 <Link
                   href={`/en/blog/${encodeURIComponent(
-                    String(router.query?.id)
+                    String(router.query?.id),
                   )}`}
                   locale={false}
                 >
@@ -48,19 +48,19 @@ export default function BlogPost({
         )}
         <ReactMarkdown
           components={{
-            code({ inline, children, ...props }) {
-              return !inline ? (
+            code({ children, className, ...rest }) {
+              const match = /language-(\w+)/.exec(className ?? "");
+              return match?.[1] ? (
                 <SyntaxHighlighter
-                  {...props}
                   // eslint-disable-next-line react/no-children-prop
                   children={String(children).replace(/\n$/, "")}
-                  language={"tsx"}
+                  language={match[1]}
                   PreTag="div"
-                  style={{ ...shStyle }}
+                  style={shStyle}
                   className="rounded-md"
                 />
               ) : (
-                <code {...props}>{children}</code>
+                <code {...rest}>{children}</code>
               );
             },
           }}
@@ -89,7 +89,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => ({
   paths: cartesian(
     blogposts.map(({ id }) => id),
-    locales ?? []
+    locales ?? [],
   ).map(([id, locale]) => ({ params: { id }, locale })),
   fallback: "blocking",
 });

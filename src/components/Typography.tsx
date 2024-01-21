@@ -6,7 +6,7 @@ export default function Typography({
   className?: string;
 }) {
   return (
-    <div className={`prose lg:prose-lg w-full prose-slate ${className}`}>
+    <div className={`prose lg:prose-lg prose-radixColors w-full ${className}`}>
       {children}
     </div>
   );

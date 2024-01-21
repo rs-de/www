@@ -53,7 +53,7 @@ export default function Home() {
           {experiencesProgrammingLanguages.map(
             ({ from, to, technology }, index) => (
               <Experience {...{ from, to, index, technology }} key={index} />
-            )
+            ),
           )}
         </p>
         <h2>{t("frontend_frameworks")}</h2>
@@ -74,7 +74,7 @@ export default function Home() {
                   <A
                     {...{ href }}
                     className={`${
-                      stillInUse ? "text-primary" : "text-gray-400"
+                      stillInUse ? "text-blue-12" : "text-gray-400"
                     }`}
                   >
                     <b>{name}</b>
@@ -99,12 +99,12 @@ export default function Home() {
             <div key={name} className="p-1">
               <A href={String(href_lang ?? href)}>{name}</A>
               <br />
-              <span className="text-slate-11">
+              <span>
                 {role_lang ?? role}&nbsp;(
                 {t("year", { count: duration, plus: "" })})
               </span>
             </div>
-          )
+          ),
         )}
       </Typography>
     </>
@@ -314,9 +314,7 @@ function Experience({ from, to, technology }: ExperienceProps) {
               plus: to ? "" : "+",
             })}
             &nbsp;
-            <span className={`font-bold ${!to && "text-primary"}`}>
-              {technology}
-            </span>
+            <span className={`font-bold`}>{technology}</span>
             &nbsp; ({to ? `${from}-${to}` : t("since", { number: from })})
           </>
         )}

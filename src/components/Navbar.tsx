@@ -37,7 +37,7 @@ export default function Navbar() {
         ),
       },
     ],
-    [t]
+    [t],
   );
   useEffect(() => {
     const scrollHandler = () => {
@@ -51,7 +51,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`transition-all z-10 sticky top-0 flex justify-between items-center p-2 bg-blue-2/50 backdrop-blur-md ${
+      className={`transition-all z-10 sticky top-0 flex justify-between items-center p-2 bg-primary-2/50 backdrop-blur-md ${
         !top && "shadow-md"
       }`}
     >
