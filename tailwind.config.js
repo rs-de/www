@@ -1,5 +1,5 @@
 const { createPlugin } = require("windy-radix-palette");
-const colors = createPlugin({ opacitySupport: true });
+const colors = createPlugin({ opacitySupport: false });
 
 // https://www.radix-ui.com/colors/docs/palette-composition/composing-a-palette
 const primaryColor = "blue";
