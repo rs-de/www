@@ -122,7 +122,7 @@ function NavbarLink(props: NavbarLinkProps) {
   return (
     <Link
       {...props}
-      className={`focus:outline-none ${
+      className={`focus:outline-hidden ${
         isActive ? "text-slate-12" : "text-slate-11"
       } hover:text-slate-12 ${props.className ?? ""}`}
     >

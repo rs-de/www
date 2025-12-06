@@ -30,7 +30,7 @@ export default function Home() {
                   height={80}
                 />
               </picture>
-              <h1 className="text-white !m-0">{t("welcome_title")}</h1>
+              <h1 className="text-white m-0!">{t("welcome_title")}</h1>
             </div>
           </div>
           <p className="text-justify">{t.rich("welcome_description")}</p>

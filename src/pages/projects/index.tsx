@@ -18,9 +18,9 @@ export default function Projects({ markdowns }: { markdowns: string[] }) {
           #
         </a>
         <div className="w-full bg-[url('/img/projects/shopping-list-visual.webp')] bg-contain sm:bg-auto bg-no-repeat border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
-          <Box className="bg-gradient-to-b sm:bg-gradient-to-br from-transparent to-primary-2  to-[25%] sm:to-[35%]">
+          <Box className="bg-linear-to-b sm:bg-linear-to-br from-transparent to-primary-2  to-25% sm:to-35%">
             <div className="sm:w-[255px] h-[320px] sm:float-left" />
-            <h2 className="!mt-0">Shopping-list App (2023)</h2>
+            <h2 className="mt-0!">Shopping-list App (2023)</h2>
             <MarkdownIntl>{markdowns[3]}</MarkdownIntl>
             <QRCodeCanvas
               className="m-auto"
@@ -31,10 +31,10 @@ export default function Projects({ markdowns }: { markdowns: string[] }) {
         <a href="#2023-2" id="2023-2">
           #
         </a>
-        <div className="bg-[url('/img/projects/rushsoft-de-visual.png')] bg-contain sm:bg-auto bg-no-repeat bg-right-top border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
+        <div className="bg-[url('/img/projects/rushsoft-de-visual.png')] bg-contain sm:bg-auto bg-no-repeat bg-top-right border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
           <BoxImageRight>
             <div className="h-[50px] sm:w-[290px] sm:h-[340px] sm:float-right" />
-            <h2 className="!mt-2">{t("development_of_this_site")}</h2>
+            <h2 className="mt-2!">{t("development_of_this_site")}</h2>
             <MarkdownIntl>{markdowns[2]}</MarkdownIntl>
           </BoxImageRight>
         </div>
@@ -42,9 +42,9 @@ export default function Projects({ markdowns }: { markdowns: string[] }) {
           #
         </a>
         <div className="bg-[url('/img/projects/padlock.png')] bg-no-repeat border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
-          <Box className="bg-gradient-to-br from-transparent  to-primary-2 to-40%">
+          <Box className="bg-linear-to-br from-transparent  to-primary-2 to-40%">
             <div className="w-[175px] h-[230px] float-left" />
-            <h2 className="!mt-2">B2B platform 2022/23 (not public)</h2>
+            <h2 className="mt-2!">B2B platform 2022/23 (not public)</h2>
             <MarkdownIntl>{markdowns[0]}</MarkdownIntl>
           </Box>
         </div>
@@ -53,7 +53,7 @@ export default function Projects({ markdowns }: { markdowns: string[] }) {
         </a>
         <div className="border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
           <Box>
-            <h2 className="!mt-2">Security driven System update (2021)</h2>
+            <h2 className="mt-2!">Security driven System update (2021)</h2>
             <MarkdownIntl>{markdowns[1]}</MarkdownIntl>
           </Box>
         </div>
@@ -81,7 +81,7 @@ function MarkdownIntl({ children, ...props }: ComponentProps<typeof Markdown>) {
 
 function BoxImageRight({ children }: { children: React.ReactNode }) {
   return (
-    <div className="h-full bg-gradient-to-b from-primary-2/60 to-primary-2 to-20% -to-b sm:bg-gradient-to-bl sm:from-transparent sm:to-primary-2 sm:to-35% overflow-hidden">
+    <div className="h-full bg-linear-to-b from-primary-2/60 to-primary-2 to-20% -to-b sm:bg-linear-to-bl sm:from-transparent sm:to-primary-2 sm:to-35% overflow-hidden">
       <div className="w-full h-full text-left float-right p-2 sm:p-4">
         {children}
       </div>
