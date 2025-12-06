@@ -34,7 +34,7 @@ const nextConfig = {
                     "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';",
                 },
               ]
-            : []
+            : [],
         ),
       },
     ];

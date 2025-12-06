@@ -153,7 +153,7 @@ It was not a big deal to fix the issues. Here is the working version:
 //translate a markdown do given by path with DeepL api leverage fetch api
 async function translateMarkdownDocument(
   documentPath: string,
-  targetLanguage: string
+  targetLanguage: string,
 ): Promise<string> {
   // Read the markdown document
   const document = await fs.promises.readFile(documentPath, "utf-8");

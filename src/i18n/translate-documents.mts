@@ -9,7 +9,7 @@ const TARGET_PATH = "src/i18n/locales";
 const targetLanguage = "de";
 
 const markdownFiles = await findMarkdownFiles(
-  `${process.cwd()}/${SOURCE_PATH}`
+  `${process.cwd()}/${SOURCE_PATH}`,
 );
 
 //better to translate serially to not overload the service
@@ -26,7 +26,7 @@ markdownFiles.forEach(async (markdownFile) => {
 
   const translatedDocument = await translateMarkdownDocument(
     markdownFile,
-    targetLanguage
+    targetLanguage,
   );
 
   await fs.promises.mkdir(targetPath, { recursive: true });
@@ -36,7 +36,7 @@ markdownFiles.forEach(async (markdownFile) => {
 //translate a markdown do given by path with DeepL api leverage fetch api
 async function translateMarkdownDocument(
   documentPath: string,
-  targetLanguage: string
+  targetLanguage: string,
 ): Promise<string> {
   // Read the markdown document
   const document = await fs.promises.readFile(documentPath, "utf-8");
@@ -68,7 +68,7 @@ async function findMarkdownFiles(directoryPath: string): Promise<string[]> {
   const files = await fs.promises.readdir(directoryPath);
   const markdownFiles = files.filter((file) => path.extname(file) === ".md");
   const markdownFilePaths = markdownFiles.map((file) =>
-    path.join(directoryPath, file)
+    path.join(directoryPath, file),
   );
   return markdownFilePaths;
 }

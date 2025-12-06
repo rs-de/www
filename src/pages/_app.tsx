@@ -13,7 +13,6 @@ export default function App({ Component, pageProps }: AppProps) {
       locale={router.locale}
       timeZone="Europe/Berlin"
       messages={pageProps.messages}
-      defaultTranslationValues={{ b: (v) => <b>{v}</b> }}
     >
       {
         <Layout>

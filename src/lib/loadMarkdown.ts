@@ -4,7 +4,7 @@ import { blogposts } from "@/i18n/locales/en/blogposts";
 
 export async function loadMarkdown(
   context: GetStaticPropsContext,
-  file: { name?: string; dir: string } = { dir: "blogposts" }
+  file: { name?: string; dir: string } = { dir: "blogposts" },
 ) {
   const locale = context.locale;
   const id = file.name ?? encodeURIComponent(String(context.params?.id ?? ""));
@@ -16,12 +16,12 @@ export async function loadMarkdown(
   if (locale && locale !== "en") {
     return await fs.readFile(
       `./src/i18n/locales/${locale}/${file.dir}/${id}.md`,
-      "utf8"
+      "utf8",
     );
   } else {
     return await fs.readFile(
       `./src/i18n/locales/en/${file.dir}/${id}.md`,
-      "utf8"
+      "utf8",
     );
   }
 }

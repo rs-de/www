@@ -31,7 +31,7 @@ It is good to plan such an estimate-refinement from the beginning on, together w
 
 #### Usage for _worker_ (the one who will do the work)
 
-1. If you genuinely have no idea, ask for a short time box ("minute" or "hour") to do a walkthrough of the work. It is important to "time-box"   this.
+1. If you genuinely have no idea, ask for a short time box ("minute" or "hour") to do a walkthrough of the work. It is important to "time-box" this.
 2. Walk through the units in mind, for instance: Is it possible in minutes? No. In Hours? No.
    In days? No. In weeks? Maybe => estimate is "week".
 
@@ -50,7 +50,7 @@ the experienced developers) know, it is not possible, or at least very time cons
 
 Since agile development does not correspond to having no plan or road-map, developers are required to give estimates. So, what can be done?
 
-One option dev-teams commonly choose is to use adjectives like "high", "medium" and "low" or colors "red", "yellow" and "green" to signal a clue of effort size. This is meant to be useful in order to get the mentioned "vague" estimates, to reflect on previous inaccuracy or to prevent other people from misunderstanding certain time frames. 
+One option dev-teams commonly choose is to use adjectives like "high", "medium" and "low" or colors "red", "yellow" and "green" to signal a clue of effort size. This is meant to be useful in order to get the mentioned "vague" estimates, to reflect on previous inaccuracy or to prevent other people from misunderstanding certain time frames.
 However, the issue is, that it isn't obvious for all participants what these units mean (e.g. think of new team members).
 What does it mean for a task to be regarded as "high"-effort? It is required to maintain some definition of these units.
 These kind of units don't work in favor of effective communication, instead they complicate it reasonably often. Contrary,

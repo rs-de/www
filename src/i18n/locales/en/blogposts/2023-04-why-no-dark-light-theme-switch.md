@@ -46,7 +46,7 @@ Unfortunately, there is a issue if the user loads the page the first time (or on
 When I thought about it two reasons came in my mind:
 
 1. As a _developer_ I want to test the dark mode on my website and be able to switch modes
-2. There might be bugs where dark mode fails, like if something is not "visible" on the page causing the user to struggle. So if we implemented a toggle, the user can still switch back to light mode and view the site as intended. 
+2. There might be bugs where dark mode fails, like if something is not "visible" on the page causing the user to struggle. So if we implemented a toggle, the user can still switch back to light mode and view the site as intended.
 
 In case 1) We can use the browser's developer tools to enable dark mode (or switch between dark and light). If we use it, we do not need a button within the app. As an example, here's said feature inside the devtools of chrome:
 
