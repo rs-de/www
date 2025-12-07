@@ -12,6 +12,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { cartesian } from "@/lib/cartesian";
 import { loadMarkdown } from "@/lib/loadMarkdown";
+import { RichText } from "@/components/RichText";
 
 export default function BlogPost({
   markdown,
@@ -32,36 +33,42 @@ export default function BlogPost({
         <h1>Blogpost</h1>
         {locale != "en" && (
           <div className="border-2 rounded-sm border-yellow-6 bg-yellow-3 p-3 mb-3">
-            {t.rich("beware_auto_translation", {
-              original: () => (
-                <Link
-                  href={`/en/blog/${encodeURIComponent(
-                    String(router.query?.id),
-                  )}`}
-                  locale={false}
-                >
-                  <b>englische Version</b>
-                </Link>
-              ),
-            })}
+            <RichText>
+              {(tags) =>
+                t.rich("beware_auto_translation", {
+                  ...tags,
+                  original: () => (
+                    <Link
+                      href={`/en/blog/${
+                        encodeURIComponent(
+                          String(router.query?.id),
+                        )
+                      }`}
+                      locale={false}
+                    >
+                      <b>englische Version</b>
+                    </Link>
+                  ),
+                })}
+            </RichText>
           </div>
         )}
         <ReactMarkdown
           components={{
             code({ children, className, ...rest }) {
               const match = /language-(\w+)/.exec(className ?? "");
-              return match?.[1] ? (
-                <SyntaxHighlighter
-                  // eslint-disable-next-line react/no-children-prop
-                  children={String(children).replace(/\n$/, "")}
-                  language={match[1]}
-                  PreTag="div"
-                  style={shStyle}
-                  className="rounded-md"
-                />
-              ) : (
-                <code {...rest}>{children}</code>
-              );
+              return match?.[1]
+                ? (
+                  <SyntaxHighlighter
+                    // eslint-disable-next-line react/no-children-prop
+                    children={String(children).replace(/\n$/, "")}
+                    language={match[1]}
+                    PreTag="div"
+                    style={shStyle}
+                    className="rounded-md"
+                  />
+                )
+                : <code {...rest}>{children}</code>;
             },
           }}
         >

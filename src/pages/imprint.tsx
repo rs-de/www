@@ -1,5 +1,5 @@
 import { getMessages } from "@/i18n/getMessages";
-import { NextPageContext } from "next";
+import { GetStaticPropsContext, NextPageContext } from "next";
 import { useTranslations } from "next-intl";
 import Head from "@/components/Head";
 import Typography from "@/components/Typography";
@@ -49,7 +49,7 @@ export default function PageImprint() {
   );
 }
 
-export const getStaticProps = async (context: NextPageContext) => ({
+export const getStaticProps = async (context: GetStaticPropsContext) => ({
   props: {
     messages: await getMessages(context),
   },

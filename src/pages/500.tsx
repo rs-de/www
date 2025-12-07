@@ -1,7 +1,7 @@
 import Head from "@/components/Head";
 import Typography from "@/components/Typography";
 import { getMessages } from "@/i18n/getMessages";
-import { NextPageContext } from "next";
+import { GetStaticPropsContext, NextPageContext } from "next";
 
 export default function Custom500() {
   return (
@@ -14,7 +14,7 @@ export default function Custom500() {
   );
 }
 
-export const getStaticProps = async (context: NextPageContext) => ({
+export const getStaticProps = async (context: GetStaticPropsContext) => ({
   props: {
     messages: await getMessages(context),
   },

@@ -1,7 +1,7 @@
 import Head from "@/components/Head";
 import Typography from "@/components/Typography";
 import { getMessages } from "@/i18n/getMessages";
-import { NextPageContext } from "next";
+import { GetStaticPropsContext } from "next";
 
 export default function Custom404() {
   return (
@@ -14,7 +14,7 @@ export default function Custom404() {
   );
 }
 
-export const getStaticProps = async (context: NextPageContext) => ({
+export const getStaticProps = async (context: GetStaticPropsContext) => ({
   props: {
     messages: await getMessages(context),
   },

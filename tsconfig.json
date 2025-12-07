@@ -16,7 +16,6 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "ignoreDeprecations": "6.0",
     "moduleResolution": "bundler"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

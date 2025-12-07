@@ -1,6 +1,6 @@
 import Typography from "@/components/Typography";
 import { getMessages } from "@/i18n/getMessages";
-import { NextPageContext } from "next";
+import { GetStaticPropsContext } from "next";
 import { useLocale, useTranslations } from "next-intl";
 import { loadMarkdown } from "../../lib/loadMarkdown";
 import Markdown from "react-markdown";
@@ -19,7 +19,7 @@ export default function Projects({ markdowns }: { markdowns: string[] }) {
         </a>
         <div className="w-full bg-[url('/img/projects/shopping-list-visual.webp')] bg-contain sm:bg-auto bg-no-repeat border border-primary-6 rounded-2xl drop-shadow-md overflow-hidden">
           <Box className="bg-linear-to-b sm:bg-linear-to-br from-transparent to-primary-2  to-25% sm:to-35%">
-            <div className="sm:w-[255px] h-[320px] sm:float-left" />
+            <div className="sm:w-[255px] h-80 sm:float-left" />
             <h2 className="mt-0!">Shopping-list App (2023)</h2>
             <MarkdownIntl>{markdowns[3]}</MarkdownIntl>
             <QRCodeCanvas
@@ -106,7 +106,7 @@ function Box({
 }
 
 const dir = "projects";
-export const getStaticProps = async (context: NextPageContext) => ({
+export const getStaticProps = async (context: GetStaticPropsContext) => ({
   props: {
     messages: await getMessages(context),
     markdowns: [

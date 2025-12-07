@@ -1,6 +1,6 @@
 import Typography from "@/components/Typography";
 import { getMessages } from "@/i18n/getMessages";
-import { NextPageContext } from "next";
+import { GetStaticPropsContext } from "next";
 import Link from "next/link";
 
 export default function Privacy() {
@@ -248,7 +248,7 @@ export default function Privacy() {
   );
 }
 
-export const getStaticProps = async (context: NextPageContext) => ({
+export const getStaticProps = async (context: GetStaticPropsContext) => ({
   props: {
     messages: await getMessages(context),
   },

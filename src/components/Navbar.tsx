@@ -5,7 +5,7 @@ import { ComponentProps, useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Tooltip } from "@/components/Tooltip";
 import { usePathname } from "next/navigation";
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import Button from "@/components/Button";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 
@@ -57,7 +57,7 @@ export default function Navbar() {
     >
       <div className="text-slate-11">
         <Link href={`/`}>
-          <div className="flex items-center h-[40px] ">
+          <div className="flex items-center h-10 ">
             <Image
               priority
               width={80}
@@ -90,7 +90,7 @@ export default function Navbar() {
         <Bars3Icon className="w-6 h-6" />
       </Button>
       <Dialog open={menuOpen} onClose={() => {}} className="relative z-50">
-        <Dialog.Backdrop className="fixed inset-0 bg-slate-1/80" />
+        <DialogBackdrop className="fixed inset-0 bg-slate-1/80" />
         <div
           className="fixed inset-0 pt-[70px]"
           onClick={(e) => {
@@ -98,7 +98,7 @@ export default function Navbar() {
             setMenuOpen(false);
           }}
         >
-          <Dialog.Panel className="w-full max-w-sm bg-slate-1 p-2 flex flex-col gap-4 items-end">
+          <DialogPanel className="w-full max-w-sm bg-slate-1 p-2 flex flex-col gap-4 items-end">
             {menueItems.map((item) => (
               <NavbarLink
                 onClick={() => {
@@ -110,7 +110,7 @@ export default function Navbar() {
                 {item.label}
               </NavbarLink>
             ))}
-          </Dialog.Panel>
+          </DialogPanel>
         </div>
       </Dialog>
     </nav>

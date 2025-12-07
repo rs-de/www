@@ -8,7 +8,8 @@
     "start": "echo \"http://$(ipconfig getifaddr en0):3000/\" && next start",
     "prepare": "husky",
     "lint": "eslint .",
-    "translate": "ts-node src/i18n/translate-documents.mts"
+    "translate": "ts-node src/i18n/translate-documents.mts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.3.3",

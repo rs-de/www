@@ -1,11 +1,12 @@
 import Head from "@/components/Head";
 import { getMessages } from "@/i18n/getMessages";
 import { A } from "@/components/A";
-import { NextPageContext } from "next";
+import { GetStaticPropsContext } from "next";
 import { useLocale, useTranslations } from "next-intl";
 import { Fragment } from "react";
 import NextHead from "next/head";
 import Typography from "@/components/Typography";
+import { RichText } from "@/components/RichText";
 
 export default function Home() {
   const t = useTranslations();
@@ -33,17 +34,27 @@ export default function Home() {
               <h1 className="text-white m-0!">{t("welcome_title")}</h1>
             </div>
           </div>
-          <p className="text-justify">{t.rich("welcome_description")}</p>
-          <p className="text-justify">{t.rich("welcome_introduction")}</p>
-          {t.rich("contact_me", {
-            a: (chunk) => (
-              <A href="mailto:contact@rushsoft.de">
-                <span className="font-bold text-white dark:text-primary-11">
-                  {chunk}
-                </span>
-              </A>
-            ),
-          })}
+          <p className="text-justify">
+            <RichText>{(tags) => t.rich("welcome_description", tags)}</RichText>
+          </p>
+          <p className="text-justify">
+            <RichText>
+              {(tags) => t.rich("welcome_introduction", tags)}
+            </RichText>
+          </p>
+          <RichText>
+            {(tags) =>
+              t.rich("contact_me", {
+                ...tags,
+                a: (chunk) => (
+                  <A href="mailto:contact@rushsoft.de">
+                    <span className="font-bold text-white dark:text-primary-11">
+                      {chunk}
+                    </span>
+                  </A>
+                ),
+              })}
+          </RichText>
         </Typography>
       </div>
       <Typography className="p-3">
@@ -111,7 +122,7 @@ export default function Home() {
   );
 }
 
-export async function getStaticProps(context: NextPageContext) {
+export async function getStaticProps(context: GetStaticPropsContext) {
   return {
     props: {
       messages: await getMessages(context),
@@ -303,21 +314,23 @@ function Experience({ from, to, technology }: ExperienceProps) {
   return (
     <>
       <span>
-        {to && to == from ? (
-          <>
-            {t("some_weeks")}&nbsp;{technology}&nbsp;({from})
-          </>
-        ) : (
-          <>
-            {t("year", {
-              count: (to ?? new Date().getFullYear()) - from,
-              plus: to ? "" : "+",
-            })}
-            &nbsp;
-            <span className={`font-bold`}>{technology}</span>
-            &nbsp; ({to ? `${from}-${to}` : t("since", { number: from })})
-          </>
-        )}
+        {to && to == from
+          ? (
+            <>
+              {t("some_weeks")}&nbsp;{technology}&nbsp;({from})
+            </>
+          )
+          : (
+            <>
+              {t("year", {
+                count: (to ?? new Date().getFullYear()) - from,
+                plus: to ? "" : "+",
+              })}
+              &nbsp;
+              <span className={`font-bold`}>{technology}</span>
+              &nbsp; ({to ? `${from}-${to}` : t("since", { number: from })})
+            </>
+          )}
       </span>
       <br />
     </>
